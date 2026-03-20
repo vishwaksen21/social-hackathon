@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import MainLayout from './layouts/MainLayout'
 import Background from './components/Background'
 import CursorGlow from './components/CursorGlow'
-import SoundToggle from './components/SoundToggle'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
