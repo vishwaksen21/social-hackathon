@@ -18,7 +18,7 @@ const itemVariants = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen pt-20 md:pt-16">
+    <div className="flex flex-col min-h-screen pt-4 md:pt-16">
 
       {/* HERO */}
       <section className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 pb-12 max-w-6xl mx-auto w-full mt-6 md:mt-0">
@@ -45,8 +45,8 @@ export default function Home() {
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="font-poppins font-black uppercase leading-[0.9] text-white"
-            style={{ fontSize: 'clamp(2.5rem, 10vw, 6.5rem)' }}
+            className="font-poppins font-black uppercase leading-[1.1] md:leading-[0.9] text-white"
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)' }}
           >
             <span className="block">THE</span>
             <span className="block gradient-text-yellow drop-shadow-[0_0_20px_rgba(255,255,0,0.25)]">

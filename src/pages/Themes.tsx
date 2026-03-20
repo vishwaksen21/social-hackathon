@@ -15,7 +15,7 @@ const fallbackIcons = ['🌐', '🏙️', '📚', '⚡', '❤️', '🌾', '🐾
 
 export default function Themes() {
   return (
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-16 md:py-24">
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
@@ -29,7 +29,7 @@ export default function Themes() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12 md:mb-20"
       >
-        <h1 className="font-poppins font-black text-3xl sm:text-4xl md:text-6xl mb-3 md:mb-4">
+        <h1 className="font-poppins font-black text-3xl sm:text-4xl md:text-6xl mb-3 md:mb-4 leading-tight">
           Hack<span className="text-primary">Themes</span>
         </h1>
 

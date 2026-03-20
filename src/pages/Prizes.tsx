@@ -4,7 +4,7 @@ import InteractiveCard from '../components/InteractiveCard'
 
 export default function Prizes() {
   return (
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-24 min-h-screen">
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -17,7 +17,7 @@ export default function Prizes() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12 md:mb-20"
       >
-        <h1 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-6xl mb-4 md:mb-6">
+        <h1 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-6xl mb-4 md:mb-6 leading-tight">
           Rewards &{' '}
           <span className="text-primary drop-shadow-[0_0_20px_rgba(255,255,0,0.4)]">
             Prizes

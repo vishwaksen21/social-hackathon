@@ -39,7 +39,7 @@ export default function Navbar() {
       >
         <div
           className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${
-            scrolled ? 'h-[65px]' : 'h-[85px]'
+            scrolled ? 'h-[60px] md:h-[65px]' : 'h-[70px] md:h-[85px]'
           }`}
         >
           {/* Logo */}
@@ -106,9 +106,9 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: '-100%' }}
               transition={{ duration: 0.35, ease: 'easeInOut' }}
-              className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-2xl border-b border-white/10 p-6 pt-24"
+              className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-2xl border-b border-white/10 p-6 pt-20 md:pt-24 max-h-[85vh] overflow-y-auto shadow-2xl"
             >
-              <div className="flex flex-col items-center gap-8">
+              <div className="flex flex-col items-center gap-6 md:gap-8">
 
                 {NAV_LINKS.map((link, i) => (
                   <motion.div

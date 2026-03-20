@@ -8,7 +8,7 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <div className="relative max-w-3xl mx-auto px-4 sm:px-6 py-14 md:py-24 min-h-screen">
+    <div className="relative max-w-3xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -22,7 +22,7 @@ export default function FAQs() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-10 md:mb-16"
       >
-        <h1 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-5xl mb-3 md:mb-4">
+        <h1 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-5xl mb-3 md:mb-4 leading-tight">
           Common{' '}
           <span className="text-primary drop-shadow-[0_0_15px_rgba(255,255,0,0.4)]">
             Questions

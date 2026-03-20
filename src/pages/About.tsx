@@ -26,7 +26,7 @@ function ScrollReveal({ children, delay = 0 }: ScrollRevealProps) {
 
 export default function About() {
   return (
-    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-6 pb-12 md:py-20">
 
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,0,0.06),transparent_50%)]" />
@@ -34,7 +34,7 @@ export default function About() {
       {/* Title */}
       <ScrollReveal>
         <h1
-          className="font-poppins font-black text-center uppercase mb-3 gradient-text"
+          className="font-poppins font-black text-center uppercase mb-3 gradient-text leading-tight"
           style={{ fontSize: 'clamp(2rem, 9vw, 5rem)' }}
         >
           About SH

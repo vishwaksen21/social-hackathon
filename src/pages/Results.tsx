@@ -4,7 +4,7 @@ import InteractiveCard from '../components/InteractiveCard'
 
 export default function Results() {
   return (
-    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-14 md:py-24 min-h-[70vh] flex flex-col justify-center">
+    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-[70vh] flex flex-col justify-center">
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
