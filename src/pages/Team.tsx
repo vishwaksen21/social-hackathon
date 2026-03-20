@@ -11,7 +11,7 @@ type Member = {
 
 /* ---------- Card ---------- */
 const TeamMemberCard = ({ member, index }: { member: Member; index: number }) => {
-  const imageUrl = member.image || '/placeholder.png'
+  const imageUrl = member.image || '/place-holder.png'
 
   return (
     <motion.div

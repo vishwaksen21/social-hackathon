@@ -380,18 +380,18 @@ export const TEAM_MEMBERS = [
     name: 'Daniya',
     role: 'President',
     image: '/placeholder.png',
-    linkedin: 'https://linkedin.com/'
+    linkedin: 'https://www.linkedin.com/in/daniya-john-6b657a304/'
   },
   {
     name: 'Deekshitha',
     role: 'Vice President',
     image: '/placeholder.png',
-    linkedin: 'https://linkedin.com/'
+    linkedin: 'https://www.linkedin.com/in/deekshitha-bandaru/'
   }, {
     name: 'Alina Paul',
     role: 'Core Member',
     image: '/placeholder.png',
-    linkedin: 'https://linkedin.com/'
+    linkedin: 'https://www.linkedin.com/in/alina-paul-340a2026t6974pp/'
   },
   {
     name: 'Nirbhik',
@@ -409,7 +409,7 @@ export const TEAM_MEMBERS = [
     name: 'Angelina',
     role: 'Social Media Head',
     image: '/placeholder.png',
-    linkedin: 'https://linkedin.com/'
+    linkedin: 'https://www.linkedin.com/in/angelina-georgy/'
   },
   {
     name: 'Harris',
