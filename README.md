@@ -34,7 +34,3 @@ The event features an action-packed 24 hours including:
 - **Mentorship Rounds (Technical & Design)**
 - **Midnight Mini-Events (Gaming, Karaoke)**
 - **Final Pitch Submissions & Closing Ceremony**
-
----
-
-*Organized with ❤️ by the Centre for Cognitive Activities (CCA).*
