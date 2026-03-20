@@ -4,7 +4,7 @@ import InteractiveCard from '../components/InteractiveCard'
 
 export default function Results() {
   return (
-    <div className="relative max-w-5xl mx-auto px-6 py-24 min-h-[70vh] flex flex-col justify-center">
+    <div className="relative max-w-5xl mx-auto px-4 md:px-6 py-16 md:py-24 min-h-[70vh] flex flex-col justify-center">
 
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
@@ -20,9 +20,9 @@ export default function Results() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-12"
+        className="text-center mb-10 md:mb-12"
       >
-        <h1 className="font-poppins font-black uppercase text-4xl md:text-6xl mb-6">
+        <h1 className="font-poppins font-black uppercase text-3xl md:text-6xl mb-6">
           Hackathon{' '}
           <span className="text-primary drop-shadow-[0_0_25px_rgba(255,255,0,0.5)]">
             Results
@@ -41,7 +41,7 @@ export default function Results() {
         transition={{ delay: 0.2 }}
         className="max-w-2xl mx-auto w-full"
       >
-        <InteractiveCard className="relative card-glass p-10 md:p-14 text-center group rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden">
+        <InteractiveCard className="relative card-glass p-8 md:p-14 text-center group rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden">
 
           {/* Glow Layer */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle,rgba(255,255,0,0.08),transparent_70%)]" />

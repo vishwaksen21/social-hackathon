@@ -8,15 +8,15 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <div className="relative max-w-3xl mx-auto px-6 py-24 min-h-screen">
+    <div className="relative max-w-3xl mx-auto px-4 md:px-6 py-16 md:py-24 min-h-screen">
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute w-[400px] h-[400px] bg-primary/10 blur-[130px] top-[10%] left-[-50px]" />
         <div className="absolute w-[300px] h-[300px] bg-primary/5 blur-[100px] bottom-[20%] right-[-50px]" />
       </div>
 
-      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
-        <h1 className="font-poppins font-black uppercase text-4xl md:text-5xl mb-4">
+      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12 md:mb-16">
+        <h1 className="font-poppins font-black uppercase text-3xl md:text-5xl mb-4">
           Common <span className="text-primary drop-shadow-[0_0_20px_rgba(255,255,0,0.4)]">Questions</span>
         </h1>
         <p className="text-white/60 font-inter max-w-lg mx-auto text-sm md:text-base">

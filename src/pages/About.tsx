@@ -28,7 +28,7 @@ function ScrollReveal({ children, delay = 0 }: ScrollRevealProps) {
 /* ---------- About Page ---------- */
 export default function About() {
   return (
-    <div className="relative max-w-5xl mx-auto px-6 py-20">
+    <div className="relative max-w-5xl mx-auto px-4 md:px-6 py-16 md:py-20">
 
       {/* Background glow */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,0,0.06),transparent_50%)]" />
@@ -37,7 +37,7 @@ export default function About() {
       <ScrollReveal>
         <h1
           className="font-poppins font-black text-center uppercase mb-4 gradient-text"
-          style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)' }}
+          style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)' }}
         >
           About SH
         </h1>
@@ -77,7 +77,7 @@ export default function About() {
             {STATS.map((stat: { label: string; value: string }, i: number) => (
               <InteractiveCard
                 key={stat.label}
-                className="card-glass p-6 text-center group relative overflow-hidden"
+                className="card-glass p-4 md:p-6 text-center group relative overflow-hidden"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

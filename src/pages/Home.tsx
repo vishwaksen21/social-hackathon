@@ -21,7 +21,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen pt-16">
 
       {/* HERO */}
-      <section className="relative flex-1 flex flex-col justify-center px-6 pb-12 max-w-6xl mx-auto w-full mt-10">
+      <section className="relative flex-1 flex flex-col justify-center px-4 md:px-6 pb-12 max-w-6xl mx-auto w-full mt-10 md:mt-0">
 
         {/* Background glow */}
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,0,0.08),transparent_40%)]" />
@@ -69,14 +69,14 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-5">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 md:gap-5 w-full">
 
             <MagneticButton>
               <motion.a
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-9 py-4 bg-primary text-black font-montserrat font-bold text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)] hover:shadow-[0_0_40px_rgba(255,255,0,0.6)] transition-all"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 md:px-9 py-3 md:py-4 bg-primary text-black font-montserrat font-bold text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)] hover:shadow-[0_0_40px_rgba(255,255,0,0.6)] transition-all"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.96 }}
               >
@@ -86,10 +86,10 @@ export default function Home() {
             </MagneticButton>
 
             <MagneticButton>
-              <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.96 }}>
+              <motion.div whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.96 }} className="w-full md:w-auto">
                 <Link
                   to="/about"
-                  className="inline-flex items-center gap-2 px-9 py-4 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all"
+                  className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 md:px-9 py-3 md:py-4 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/30 transition-all"
                 >
                   Learn More
                   <ChevronDown size={16} />
@@ -131,7 +131,7 @@ export default function Home() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {STATS.map((stat) => (
-              <InteractiveCard key={stat.label} className="card-glass p-6 text-center group hover:border-primary/40 transition-all">
+              <InteractiveCard key={stat.label} className="card-glass p-4 md:p-6 text-center group hover:border-primary/40 transition-all">
                 <div className="font-poppins text-xl font-black text-primary mb-2 group-hover:scale-110 transition-transform">
                   {stat.value}
                 </div>

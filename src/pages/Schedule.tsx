@@ -31,7 +31,7 @@ function ScheduleRow({ time, event, location, index }: { time: string; event: st
 
 export default function Schedule() {
   return (
-    <div className="relative max-w-6xl mx-auto px-6 py-24">
+    <div className="relative max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-24">
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute w-[500px] h-[500px] bg-primary/10 blur-[150px] top-[10%] left-[-100px]" />
@@ -39,8 +39,8 @@ export default function Schedule() {
       </div>
 
       {/* 🚀 Title */}
-      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-24">
-        <h1 className="font-poppins font-black uppercase text-4xl md:text-6xl mb-6">
+      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16 md:mb-24">
+        <h1 className="font-poppins font-black uppercase text-3xl md:text-6xl mb-6">
           Event <span className="text-primary drop-shadow-[0_0_20px_rgba(255,255,0,0.4)]">Schedule</span>
         </h1>
         <p className="text-white/60 max-w-xl mx-auto text-sm md:text-base font-inter leading-relaxed">
@@ -80,9 +80,9 @@ export default function Schedule() {
                 transition={{ delay: i * 0.1, duration: 0.6, type: 'spring' }}
               >
                 {/* Content card */}
-                <div className={`w-[48%] md:w-[45%] ${item.side === 'right' ? 'text-left pl-4 md:pl-10' : 'text-right pr-4 md:pr-10'}`}>
+                <div className={`w-[48%] md:w-[45%] ${item.side === 'right' ? 'text-left pl-3 md:pl-10' : 'text-right pr-3 md:pr-10'}`}>
                   <InteractiveCard
-                    className="card-glass p-6 md:p-8 inline-block w-full group relative overflow-hidden transition-all border border-white/10 bg-white/[0.02] backdrop-blur-xl rounded-2xl"
+                    className="card-glass p-4 md:p-8 inline-block w-full group relative overflow-hidden transition-all border border-white/10 bg-white/[0.02] backdrop-blur-xl rounded-2xl"
                     whileHover={{ y: -6, boxShadow: '0 20px 40px rgba(0,0,0,0.6), 0 0 30px rgba(255,255,0,0.15)' }}
                   >
                     <p className="font-poppins font-black text-primary text-3xl md:text-4xl mb-2 drop-shadow-[0_0_10px_rgba(255,255,0,0.4)]">{item.step}</p>

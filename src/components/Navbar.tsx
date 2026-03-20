@@ -24,7 +24,7 @@ export default function Navbar() {
         }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-8 flex items-center justify-between transition-all duration-500 ${scrolled ? 'h-[70px]' : 'h-[90px]'
+        className={`max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${scrolled ? 'h-[70px]' : 'h-[90px]'
           }`}
       >
 
@@ -43,7 +43,7 @@ export default function Navbar() {
         </Link>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-10">
+        <nav className="flex items-center gap-6 md:gap-10 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {NAV_LINKS.map((link) => {
             const isActive = location.pathname === link.path
 

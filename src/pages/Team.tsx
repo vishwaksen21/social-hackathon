@@ -83,7 +83,7 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
 /* ---------- Page ---------- */
 export default function Team() {
   return (
-    <div className="relative max-w-7xl mx-auto px-6 py-24 min-h-screen">
+    <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 min-h-screen">
 
       {/* 🔥 Background Glow */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
@@ -96,7 +96,7 @@ export default function Team() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-20"
       >
-        <h1 className="font-poppins font-black uppercase text-4xl md:text-6xl mb-6">
+        <h1 className="font-poppins font-black uppercase text-3xl md:text-6xl mb-6">
           Meet The{' '}
           <span className="text-primary drop-shadow-[0_0_20px_rgba(255,255,0,0.4)]">
             Team
@@ -110,7 +110,7 @@ export default function Team() {
 
       {/* 👥 Team Grid */}
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-20 md:grid-cols-3 md:gap-x-8 md:gap-y-24">
+        <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-16 md:grid-cols-3 md:gap-x-8 md:gap-y-24">
           {TEAM_MEMBERS.map((member, index) => (
             <TeamMemberCard key={member.name} member={member} index={index} />
           ))}
