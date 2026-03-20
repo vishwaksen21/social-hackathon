@@ -8,11 +8,22 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
 
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
+
+  // Lock scroll when menu open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+  }, [menuOpen])
 
   return (
     <>
@@ -27,33 +38,26 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${
-            scrolled ? 'h-[70px]' : 'h-[90px]'
+          className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${
+            scrolled ? 'h-[65px]' : 'h-[85px]'
           }`}
         >
           {/* Logo */}
-          <Link
-            to="/"
-            className="group flex items-center gap-1 font-poppins font-black tracking-wider"
-          >
+          <Link to="/" className="flex items-center gap-1 font-poppins font-black">
             <span className="text-primary text-3xl md:text-4xl">&lt;</span>
             <span className="text-white text-2xl md:text-3xl">/</span>
             <span className="text-primary text-3xl md:text-4xl">&gt;</span>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
             {NAV_LINKS.map((link) => {
               const isActive = location.pathname === link.path
 
               return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="relative font-montserrat text-base tracking-wide"
-                >
+                <Link key={link.path} to={link.path} className="relative">
                   <span
-                    className={`transition-all ${
+                    className={`text-sm tracking-wide transition ${
                       isActive
                         ? 'text-primary'
                         : 'text-white/80 hover:text-primary'
@@ -73,39 +77,65 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden px-4 py-2 rounded-xl border border-white/20 text-white backdrop-blur-lg"
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden px-4 py-2 rounded-xl border border-white/20 text-white backdrop-blur-lg active:scale-95 transition"
           >
             MENU +
           </button>
         </div>
       </motion.header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed top-[90px] left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-black/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-6 z-40"
-          >
-            <div className="flex flex-col gap-6">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMenuOpen(false)}
+            />
+
+            {/* Menu Panel */}
+            <motion.div
+              initial={{ y: '-100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '-100%' }}
+              transition={{ duration: 0.35, ease: 'easeInOut' }}
+              className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-2xl border-b border-white/10 p-6 pt-24"
+            >
+              <div className="flex flex-col items-center gap-8">
+
+                {NAV_LINKS.map((link, i) => (
+                  <motion.div
+                    key={link.path}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <Link
+                      to={link.path}
+                      className="text-white text-xl font-medium hover:text-primary transition"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
+
+                {/* Close Button */}
+                <button
                   onClick={() => setMenuOpen(false)}
-                  className="text-white text-lg tracking-wide hover:text-primary transition-all"
+                  className="mt-6 text-sm text-white/60 hover:text-primary"
                 >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
+                  CLOSE
+                </button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
