@@ -8,39 +8,46 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
 
-  // Scroll effect
+  /* ---------- Scroll Effect ---------- */
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on route change
+  /* ---------- Close Menu on Route Change ---------- */
   useEffect(() => {
     setMenuOpen(false)
   }, [location.pathname])
 
-  // Lock scroll when menu open
+  /* ---------- Lock Body Scroll (FIXED CLEANUP) ---------- */
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [menuOpen])
 
   return (
     <>
+      {/* 🔥 HEADER */}
       <motion.header
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-black/60 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled
+            ? 'bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div
-          className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${
-            scrolled ? 'h-[60px] md:h-[65px]' : 'h-[70px] md:h-[85px]'
-          }`}
+          className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between transition-all duration-500 ${scrolled ? 'h-[65px]' : 'h-[85px]'
+            }`}
         >
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1 font-poppins font-black">
@@ -57,11 +64,10 @@ export default function Navbar() {
               return (
                 <Link key={link.path} to={link.path} className="relative">
                   <span
-                    className={`text-sm tracking-wide transition ${
-                      isActive
+                    className={`text-sm tracking-wide transition ${isActive
                         ? 'text-primary'
                         : 'text-white/80 hover:text-primary'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </span>
@@ -87,13 +93,13 @@ export default function Navbar() {
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
+      {/* 🔥 MOBILE MENU */}
       <AnimatePresence>
         {menuOpen && (
           <>
             {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[90]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -106,9 +112,9 @@ export default function Navbar() {
               animate={{ y: 0 }}
               exit={{ y: '-100%' }}
               transition={{ duration: 0.35, ease: 'easeInOut' }}
-              className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-2xl border-b border-white/10 p-6 pt-20 md:pt-24 max-h-[85vh] overflow-y-auto shadow-2xl"
+              className="fixed top-0 left-0 right-0 z-[110] bg-black/95 backdrop-blur-2xl border-b border-white/10 p-6 pt-24 max-h-[85vh] overflow-y-auto shadow-2xl"
             >
-              <div className="flex flex-col items-center gap-6 md:gap-8">
+              <div className="flex flex-col items-center gap-6">
 
                 {NAV_LINKS.map((link, i) => (
                   <motion.div
@@ -126,7 +132,7 @@ export default function Navbar() {
                   </motion.div>
                 ))}
 
-                {/* Close Button */}
+                {/* Close */}
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="mt-6 text-sm text-white/60 hover:text-primary"
