@@ -1,6 +1,6 @@
 # 🌟 The Social Hackathon 2026
 
-Welcome to the official repository for **The Social Hackathon 2026**, organized by the Centre for Cognitive Activities (CCA).
+Welcome to the official repository for **The Social Hackathon 2026**, organized by the Innovation Club.
 
 The Social Hackathon is a premier 24-hour innovation marathon designed to bridge the gap between academics and real-world readiness. Our mission is to nurture aptitude, communication, and cognitive growth by challenging students to build creative, skill-based solutions for real-world social problems.
 
@@ -34,3 +34,6 @@ The event features an action-packed 24 hours including:
 - **Mentorship Rounds (Technical & Design)**
 - **Midnight Mini-Events (Gaming, Karaoke)**
 - **Final Pitch Submissions & Closing Ceremony**
+---
+
+*Organized with ❤️ by the Innovation Club.*
