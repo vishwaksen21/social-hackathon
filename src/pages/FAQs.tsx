@@ -5,16 +5,12 @@ import InteractiveCard from '../components/InteractiveCard'
 import { FAQS } from '../utils/data'
 
 export default function FAQs() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <div className="relative max-w-3xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
 
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-primary/10 blur-[100px] md:blur-[130px] top-[10%] left-[-50px]" />
-        <div className="absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] bg-primary/5 blur-[80px] md:blur-[100px] bottom-[20%] right-[-50px]" />
-      </div>
+
 
       {/* Title */}
       <motion.div

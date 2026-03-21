@@ -60,11 +60,7 @@ export default function Schedule() {
   return (
     <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24">
 
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-primary/10 blur-[120px] md:blur-[150px] top-[10%] left-[-100px]" />
-        <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-primary/5 blur-[100px] md:blur-[120px] bottom-[20%] right-[-100px]" />
-      </div>
+
 
       {/* Title */}
       <motion.div

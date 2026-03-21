@@ -99,10 +99,7 @@ export default function Team() {
   return (
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
 
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-primary/10 blur-[120px] md:blur-[150px] top-0 left-1/2 -translate-x-1/2" />
-      </div>
+
 
       {/* Title */}
       <motion.div

@@ -6,16 +6,6 @@ export default function Results() {
   return (
     <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-[70vh] flex flex-col justify-center">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] bg-primary/10 blur-[100px] md:blur-[130px] rounded-full"
-          animate={{ x: [0, 40, 0], y: [0, -40, 0] }}
-          transition={{ duration: 12, repeat: Infinity }}
-          style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
-        />
-      </div>
-
       {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -43,8 +33,6 @@ export default function Results() {
       >
         <InteractiveCard className="relative card-glass p-6 sm:p-8 md:p-14 text-center group rounded-[24px] md:rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl overflow-hidden">
 
-          {/* Glow Layer */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle,rgba(255,255,0,0.08),transparent_70%)]" />
 
           {/* Icon */}
           <div className="flex justify-center mb-6 md:mb-8 relative">

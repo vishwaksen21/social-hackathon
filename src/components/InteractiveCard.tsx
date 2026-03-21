@@ -56,14 +56,7 @@ export default function InteractiveCard({
       }}
       className={`relative group ${className}`}
     >
-      {/* The glow effect layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none rounded-[inherit] transition-opacity duration-300 opacity-0 group-hover:opacity-100 overflow-hidden mix-blend-screen">
-        <motion.div
-          className="w-full h-full absolute inset-0"
-          style={{ background }}
-        />
-      </div>
-      
+
       {/* Content wrapper */}
       <div className="relative z-10 h-full w-full rounded-[inherit]">
         {children}

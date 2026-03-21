@@ -38,7 +38,6 @@ export default function CursorGlow() {
         style={{
           width: '600px',
           height: '600px',
-          background: 'radial-gradient(circle, rgba(255,255,0,0.06) 0%, transparent 60%)',
           borderRadius: '50%',
           x: smoothX,
           y: smoothY,

@@ -17,11 +17,7 @@ export default function Themes() {
   return (
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-16 md:py-24">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-primary/10 blur-[120px] md:blur-[140px] top-[-120px] left-[-120px]" />
-        <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-primary/5 blur-[100px] md:blur-[120px] bottom-[-100px] right-[-100px]" />
-      </div>
+
 
       {/* Title */}
       <motion.div
@@ -64,8 +60,6 @@ function ThemeCard({ theme, index }: { theme: Theme; index: number }) {
       whileHover={{ y: -6 }}
     >
 
-      {/* Glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-[radial-gradient(circle_at_top_left,rgba(255,255,0,0.08),transparent_60%)]" />
 
       {/* Header */}
       <div className="flex items-center justify-between px-4 md:px-5 py-3 md:py-4 border-b border-white/5">

@@ -23,8 +23,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 pb-12 max-w-6xl mx-auto w-full mt-6 md:mt-0">
 
-        {/* Background glow */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,0,0.08),transparent_40%)]" />
+
 
         <motion.div
           className="flex flex-col items-start gap-8 md:gap-10"
