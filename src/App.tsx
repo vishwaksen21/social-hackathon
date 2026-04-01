@@ -14,36 +14,33 @@ const Team = lazy(() => import('./pages/Team'))
 const Results = lazy(() => import('./pages/Results'))
 const FAQs = lazy(() => import('./pages/FAQs'))
 
-// PageTransition component standardizing our blur-fade logic
-function PageTransition({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, filter: 'blur(10px)', y: 15 }}
-      animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-      exit={{ opacity: 0, filter: 'blur(10px)', y: -15 }}
-      transition={{ duration: 0.4, ease: 'easeInOut' }}
-      className="w-full"
-    >
-      {children}
-    </motion.div>
-  )
-}
-
 function AnimatedRoutes() {
   const location = useLocation()
 
   return (
-    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo({ top: 0, behavior: 'instant' })}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/themes" element={<PageTransition><Themes /></PageTransition>} />
-        <Route path="/schedule" element={<PageTransition><Schedule /></PageTransition>} />
-        <Route path="/prizes" element={<PageTransition><Prizes /></PageTransition>} />
-        <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
-        <Route path="/results" element={<PageTransition><Results /></PageTransition>} />
-        <Route path="/faqs" element={<PageTransition><FAQs /></PageTransition>} />
-      </Routes>
+    <AnimatePresence
+      mode="wait"
+      onExitComplete={() => window.scrollTo({ top: 0, behavior: 'auto' })}
+    >
+      <motion.div
+        key={location.pathname}
+        initial={{ opacity: 0, filter: 'blur(10px)', y: 15 }}
+        animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
+        exit={{ opacity: 0, filter: 'blur(10px)', y: -15 }}
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
+        className="w-full"
+      >
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/themes" element={<Themes />} />
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/prizes" element={<Prizes />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/results" element={<Results />} />
+          <Route path="/faqs" element={<FAQs />} />
+        </Routes>
+      </motion.div>
     </AnimatePresence>
   )
 }

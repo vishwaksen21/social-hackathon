@@ -4,7 +4,7 @@ import InteractiveCard from '../components/InteractiveCard'
 
 export default function Results() {
   return (
-    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-[70vh] flex flex-col justify-center">
+    <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24">
 
       {/* Title */}
       <motion.div
@@ -61,6 +61,67 @@ export default function Results() {
           </p>
 
         </InteractiveCard>
+      </motion.div>
+
+      {/* 2025 Highlights (from last year's brochure) */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.15 }}
+        className="mt-14 md:mt-20"
+      >
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="font-poppins font-black uppercase text-xl sm:text-2xl md:text-4xl leading-tight">
+            2025{' '}
+            <span className="text-primary drop-shadow-[0_0_20px_rgba(255,255,0,0.35)]">
+              Highlights
+            </span>
+          </h2>
+          <p className="text-white/60 max-w-2xl mx-auto text-xs sm:text-sm md:text-base font-inter leading-relaxed px-2 mt-2">
+            A quick look back at last year’s winning innovations.
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:gap-6">
+          <InteractiveCard className="card-glass p-5 md:p-7 rounded-2xl border border-white/10 bg-white/[0.03]">
+            <p className="text-white/70 font-inter text-xs md:text-sm leading-relaxed">
+              <span className="text-primary font-semibold">Participants:</span> 90 teams shortlisted nationwide for the on-campus hackathon.
+            </p>
+          </InteractiveCard>
+
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            <InteractiveCard className="card-glass p-5 md:p-7 rounded-2xl border border-white/10 bg-white/[0.03]">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-primary font-montserrat font-bold text-xs uppercase tracking-widest">
+                  1st Prize
+                </p>
+                <span className="text-white/40 text-[10px] md:text-xs font-mono">2025</span>
+              </div>
+              <p className="text-white font-poppins font-bold text-base md:text-lg leading-snug">
+                Miniaturized electro-osmotic pump for non-invasive cancer drug delivery
+              </p>
+              <p className="text-white/60 font-inter text-xs md:text-sm mt-2">
+                Team Tools Squad (CMRIT)
+              </p>
+            </InteractiveCard>
+
+            <InteractiveCard className="card-glass p-5 md:p-7 rounded-2xl border border-white/10 bg-white/[0.03]">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-primary font-montserrat font-bold text-xs uppercase tracking-widest">
+                  2nd Prize
+                </p>
+                <span className="text-white/40 text-[10px] md:text-xs font-mono">2025</span>
+              </div>
+              <p className="text-white font-poppins font-bold text-base md:text-lg leading-snug">
+                WildlifeRailGuard — an AI-driven system preventing train-animal collisions
+              </p>
+              <p className="text-white/60 font-inter text-xs md:text-sm mt-2">
+                Team GARUDA (Amrita Vishwa Vidyapeetham)
+              </p>
+            </InteractiveCard>
+          </div>
+        </div>
       </motion.div>
     </div>
   )

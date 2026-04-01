@@ -4,7 +4,7 @@ import InteractiveCard from '../components/InteractiveCard'
 
 export default function Prizes() {
   return (
-    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
+    <div className="relative max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24">
 
 
 

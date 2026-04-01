@@ -9,7 +9,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   return (
     <div className="relative min-h-screen flex flex-col z-10 overflow-x-hidden w-full">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-[72px] sm:pt-[80px] md:pt-20">
         {children}
       </main>
       <Footer />

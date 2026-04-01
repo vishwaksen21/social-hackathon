@@ -97,7 +97,7 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
 /* ---------- Page ---------- */
 export default function Team() {
   return (
-    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24">
 
 
 

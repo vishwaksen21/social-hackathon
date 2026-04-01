@@ -8,7 +8,7 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="relative max-w-3xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24 min-h-screen">
+    <div className="relative max-w-3xl mx-auto px-4 sm:px-6 pt-8 pb-14 md:py-24">
 
 
 

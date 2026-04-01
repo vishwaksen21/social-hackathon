@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import CountdownTimer from '../components/CountdownTimer'
 import InteractiveCard from '../components/InteractiveCard'
 import MagneticButton from '../components/MagneticButton'
-import { REGISTER_URL, STATS } from '../utils/data'
+import { REGISTER_URL, STATS, THEMES } from '../utils/data'
 
 const containerVariants = {
   hidden: {},
@@ -17,11 +17,13 @@ const itemVariants = {
 }
 
 export default function Home() {
+  const marqueeText = `${THEMES.map((t) => t.title).join(' • ')} • `.toUpperCase()
+
   return (
-    <div className="flex flex-col min-h-screen pt-4 md:pt-16">
+    <div className="flex flex-col pt-4 md:pt-16">
 
       {/* HERO */}
-      <section className="relative flex-1 flex flex-col justify-center px-4 sm:px-6 pb-12 max-w-6xl mx-auto w-full mt-6 md:mt-0">
+      <section className="relative flex flex-col px-4 sm:px-6 pb-12 pt-6 md:pt-10 max-w-6xl mx-auto w-full mt-6 md:mt-0">
 
 
 
@@ -145,13 +147,21 @@ export default function Home() {
 
       {/* Marquee */}
       <div className="w-full overflow-hidden py-3 md:py-4 bg-primary/5 border-y border-primary/10">
-        <div className="flex whitespace-nowrap animate-[scroll_18s_linear_infinite]">
-          {Array(4).fill('AI • WEB3 • IOT • CLOUD • OPEN SOURCE • SECURITY • ').map((text, i) => (
-            <span key={i} className="text-primary/50 font-montserrat font-bold text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase px-4 md:px-6">
-              {text}
-            </span>
-          ))}
-        </div>
+        <motion.div
+          className="flex whitespace-nowrap will-change-transform"
+          animate={{ x: ['0%', '-50%'] }}
+          transition={{ duration: 18, ease: 'linear', repeat: Infinity }}
+        >
+          <span className="text-primary/50 font-montserrat font-bold text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase px-4 md:px-6">
+            {marqueeText}
+          </span>
+          <span
+            aria-hidden="true"
+            className="text-primary/50 font-montserrat font-bold text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase px-4 md:px-6"
+          >
+            {marqueeText}
+          </span>
+        </motion.div>
       </div>
 
     </div>
