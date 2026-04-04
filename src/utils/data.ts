@@ -322,7 +322,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Daniya',
     role: 'President',
-    image: '/placeholder.png',
+    image: '/daniya.jpeg',
     linkedin: 'https://www.linkedin.com/in/daniya-john-6b657a304/'
   },
   {
