@@ -192,6 +192,45 @@ export const THEMES: Theme[] = [
       'Blockchain-based Wildlife Protection Records',
     ],
   },
+  {
+    id: 8,
+    icon: '/themes/fin.png',
+    title: 'FinTech & Financial Inclusion',
+    description: 'FinTech is transforming India’s financial ecosystem by making banking, payments, and credit accessible to all. Technologies like UPI (Unified Payments Interface), Aadhaar, and mobile banking are enabling secure and instant transactions, especially in rural and underserved areas.',
+    focuses: [
+      'Microfinance Solutions',
+      'Digital Lending Platforms',
+      'Fraud Detection Systems',
+      'Financial Literacy Apps',
+      'Relevant SDGs: SDG 1, 8, 9, 10',
+    ],
+  },
+  {
+    id: 9,
+    icon: '/themes/ai.png',
+    title: 'AI for Impact',
+    description: 'Artificial Intelligence is driving social transformation in India across healthcare, education, agriculture, and governance. AI-powered tools can improve decision-making, automate processes, and provide personalized services.',
+    focuses: [
+      'Disease Prediction Models',
+      'Smart Learning Systems',
+      'Crop Analysis Tools',
+      'Public Safety Solutions',
+      'Relevant SDGs: SDG 3, 4, 9, 11',
+    ],
+  },
+  {
+    id: 10,
+    icon: '/themes/climate.png',
+    title: 'Climate Tech & Sustainability',
+    description: 'Climate technology focuses on solving environmental challenges through innovation. In India, there is a growing need for renewable energy, waste management, and sustainable agriculture solutions.',
+    focuses: [
+      'Solar Energy Solutions',
+      'EV Infrastructure Development',
+      'Pollution Monitoring Systems',
+      'Climate Data Analytics',
+      'Relevant SDGs: SDG 7, 11, 12, 13',
+    ],
+  },
 ]
 
 // ─── Event Timeline ───────────────────────────────────────────────────────────
@@ -220,103 +259,7 @@ export const DAY2_SCHEDULE = [
 ]
 
 // ─── Results ──────────────────────────────────────────────────────────────────
-export const FINALIST_TEAMS = [
-  { id: 1, team: 'RealityCheck', college: 'R V College of Engineering' },
-  { id: 2, team: '404DevFound', college: 'Siddaganga Institute of Technology' },
-  { id: 3, team: 'Medheads', college: 'CMR Institute of Technology' },
-  { id: 4, team: 'BUGS', college: 'CMR Institute of Technology' },
-  { id: 5, team: 'PowerGrid', college: 'CMR Institute of Technology' },
-  { id: 6, team: 'DEViant', college: 'R.V. College of Engineering (RVCE)' },
-  { id: 7, team: 'Coffee Overflow', college: 'CMR Institute of Technology' },
-  { id: 8, team: 'TrioByte', college: 'Amrita Vishwa Vidyapeetham' },
-  { id: 9, team: 'Techies girls', college: 'CMR Institute of Technology' },
-  { id: 10, team: 'NONCE', college: 'CMR Institute of Technology' },
-  { id: 11, team: 'P.A.W.S (Proactive Animal Warning System)', college: 'CMR Institute Of Technology' },
-  { id: 12, team: 'CodeGreen', college: 'CMR Institute of Technology' },
-  { id: 13, team: 'RESCUE RANGERS', college: 'CMR Institute of Technology' },
-  { id: 14, team: "FuFu-Shinigami's", college: 'Sindhi College' },
-  { id: 15, team: 'The AI Optimizers', college: 'CMR Institute of Technology' },
-  { id: 16, team: 'The Bro Code', college: 'CMR Institute of Technology' },
-  { id: 17, team: 'Kaapi Overflow', college: 'CMR Institute of Technology' },
-  { id: 18, team: 'The Code Blooded', college: 'DON BOSCO INSTITUTE OF TECHNOLOGY BANGALORE' },
-  { id: 19, team: 'GATiRAKSHAK', college: 'National Public School Agara, Bangalore' },
-  { id: 20, team: 'Runtime terror', college: 'CMR Institute of Technology' },
-  { id: 21, team: 'Team Nexa', college: 'CMR Institute Of Technology' },
-  { id: 22, team: 'IDEATORS', college: 'CMR Institute Of Technology' },
-  { id: 23, team: 'Team Nexlot', college: 'GOPALAN COLLEGE OF ENGINEERING AND MANAGEMENT' },
-  { id: 24, team: 'The Optimizers', college: 'R.V. College of Engineering' },
-  { id: 25, team: 'CodeCatalyst', college: 'Siddaganaga Institute Of Technology' },
-  { id: 26, team: 'DosAI', college: 'CMR Institute of Technology' },
-  { id: 27, team: 'NeuroSentinels', college: 'CMR Institute of Technology' },
-  { id: 28, team: 'Lazy Monks', college: 'Bangalore Institute of Technology' },
-  { id: 29, team: 'HANUMAN', college: 'CMR Institute of Technology' },
-  { id: 30, team: 'Tri-Coders', college: 'CMR Institute of Technology' },
-  { id: 31, team: 'Debutants', college: 'CMR Institute of Technology' },
-  { id: 32, team: 'Team Pawtrollers', college: 'CMR INSTITUTE OF TECHNOLOGY' },
-  { id: 33, team: 'Tridev', college: 'CMR Institute of Technology' },
-  { id: 34, team: 'Safety Ninjas', college: 'CMR Institute of Technology' },
-  { id: 35, team: 'Team Ekalavya', college: 'PES UNIVERSITY' },
-  { id: 36, team: 'CodeCradle', college: 'Siddaganga Institute of Technology' },
-  { id: 37, team: 'Code red crew', college: 'CMR Institute of Technology Bengaluru' },
-  { id: 38, team: 'tech4paws', college: 'CMR Institute of Technology' },
-  { id: 39, team: 'OcuSense', college: 'RV COLLEGE OF ENGINEERING' },
-  { id: 40, team: 'Backlog', college: 'Siddaganga Institute of Technology (SIT), Tumkur' },
-  { id: 41, team: 'Focus', college: 'University of Visvesvaraya College of Engineering' },
-  { id: 42, team: 'Syndicate', college: 'Gopalan College of Engineering and Management' },
-  { id: 43, team: 'SPC-SQUAD', college: 'CMR Institute of Technology' },
-  { id: 44, team: 'Trinova', college: 'CMR Institute of Technology' },
-  { id: 45, team: 'PawPort', college: 'CMR Institute of Technology' },
-  { id: 46, team: 'GramHealers', college: 'R V college of Engineering' },
-  { id: 47, team: 'GTx', college: 'Siddaganga Institute of Technology' },
-  { id: 48, team: 'TEAM-HUSTLERS', college: 'MVJ COLLEGE OF ENGINEERING' },
-  { id: 49, team: 'Future Stack', college: 'Techno India University, West Bengal' },
-  { id: 50, team: 'MindHackers', college: 'CMR Institute of Technology' },
-  { id: 51, team: 'The bugs squad', college: 'NMIT, Lowry Adventist College, Garden City University' },
-  { id: 52, team: 'Code Stormers', college: 'Sri Sairam College of Engineering' },
-  { id: 53, team: 'Tech Titans', college: 'Siddaganga Institute of Technology, Tumkur' },
-  { id: 54, team: 'Illu-minati', college: 'BMS Institute of Technology and Management' },
-  { id: 55, team: 'Agritech innovators', college: 'Techno India University' },
-  { id: 56, team: 'TAGARU TECH', college: 'CMR Institute of Technology' },
-  { id: 57, team: 'Prajavani Protocol', college: 'BNM Institute of Technology' },
-  { id: 58, team: 'Genetic Drift', college: 'BMS Institute of Technology and Management' },
-  { id: 59, team: 'DXTR MINDS', college: 'CMR Institute of Technology' },
-  { id: 60, team: 'Gorkhali', college: 'CMR Institute of Technology' },
-  { id: 61, team: 'CertiSure', college: 'MVJ COLLEGE OF ENGINEERING' },
-  { id: 62, team: "Normal_Dev's", college: 'M S Ramaiah Institute Of Technology' },
-  { id: 63, team: 'Sudo wudo', college: 'M S Ramaiah Institute of Technology (MSRIT)' },
-  { id: 64, team: 'TinyVoices Tech', college: 'CMR Institute of Technology' },
-  { id: 65, team: 'The Touch Explorers', college: 'BVRIT HYDERABAD College of Engineering For Women' },
-  { id: 66, team: "Society's Engineers", college: 'CMR Institute Of Technology' },
-  { id: 67, team: 'HiveX', college: 'Dr Ambedkar Institute of Technology' },
-  { id: 68, team: 'Clinnovaters', college: 'Seshadri Rao Gudlavalleru Engineering College' },
-  { id: 69, team: 'FarmZilla', college: 'Dayananda Sagar College of Engineering (DSCE), Bengaluru' },
-  { id: 70, team: 'Micro X', college: 'CMR Institute of Technology' },
-  { id: 71, team: 'Ohm Shanti Ohm', college: 'CMR Institute of Technology' },
-  { id: 72, team: 'AyuConnect', college: 'MVJ College of Engineering' },
-  { id: 73, team: 'Code Conquerers', college: 'GOPALAN COLLEGE OF ENGINEERING AND MANAGEMENT' },
-  { id: 74, team: 'Themis', college: 'R V College of Engineering' },
-  { id: 75, team: 'HackVerse', college: 'CMR Institute of Technology' },
-  { id: 76, team: 'Syntax', college: 'Siddaganga Institute of Technology' },
-  { id: 77, team: 'NeuralNinjas', college: 'CMR Institute of Technology' },
-  { id: 78, team: 'Sense Node', college: 'CMR Institute of Technology' },
-  { id: 79, team: 'CatsCanCode', college: 'CMRIT' },
-  { id: 80, team: 'THE UNSTOPPABLES', college: 'SRI ESHWAR COLLEGE OF ENGINEERING' },
-  { id: 81, team: 'Rescue Revolution', college: 'CMR INSTITUTE OF TECHNOLOGY' },
-  { id: 82, team: 'Medi Bridge', college: 'MVJ COLLEGE OF ENGINEERING' },
-  { id: 83, team: 'Akansha Kumari', college: 'CMR Institute of Technology' },
-  { id: 84, team: 'Team Norbel', college: 'CMR Institute of Technology' },
-  { id: 85, team: 'Backlog', college: 'Siddaganga Institute of Technology (SIT), Tumkur' },
-  { id: 86, team: 'FetalGuard', college: 'CMR Institute of Technology' },
-  { id: 87, team: 'bYTE', college: 'CMR Institute of Technology' },
-  { id: 88, team: 'Byte Squad', college: 'AGM Rural College of Engineering' },
-  { id: 89, team: 'Dream hack', college: 'CMR Institute of Technology' },
-  { id: 90, team: 'Visionary', college: 'CMR Institute of Technology' },
-  { id: 91, team: 'Access granted', college: 'CMR Institute of Technology' },
-  { id: 92, team: 'Null pointers', college: 'Sri Venkateswara College of Engineering' },
-  { id: 93, team: 'The CodeFather', college: 'CMR Institute of Technology' },
-  { id: 94, team: 'SpeechMorphers', college: 'MVJ College Of Engineering' },
-  { id: 95, team: 'Infinite loops', college: 'CMR Institute of Technology' },
-]
+export const FINALIST_TEAMS: { id: number, team: string, college: string }[] = []
 
 // ─── FAQs ────────────────────────────────────────────────────────────────────
 export const FAQS = [
@@ -402,7 +345,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Vishwak',
     role: 'Event Management Head',
-    image: '/placeholder.png',
+    image: '/vishwak3.png',
     linkedin: 'https://www.linkedin.com/in/vishwaksen21/'
   },
   {
@@ -420,7 +363,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Ujjayani',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/ujjayani.jpeg',
     linkedin: 'https://linkedin.com/'
   },
   {
@@ -438,13 +381,13 @@ export const TEAM_MEMBERS = [
   {
     name: 'Deeksha',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/deeksha.jpeg',
     linkedin: 'https://www.linkedin.com/in/deeksha-ganiga-681260356?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
     name: 'Priscilla',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/pri.jpeg',
     linkedin: 'https://www.linkedin.com/in/priscilla-shiny-145102398/'
   },
   {
@@ -456,7 +399,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Vaibhav',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/vaibhav.jpg',
     linkedin: 'https://www.linkedin.com/in/vaibhav-khanna-52785632a?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   }
 ]
