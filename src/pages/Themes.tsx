@@ -185,7 +185,7 @@ export default function Themes() {
           className="text-center mb-16 md:mb-20"
         >
           <h1 className="font-poppins font-black text-[2.5rem] sm:text-5xl md:text-[5rem] mb-4 md:mb-6 tracking-tight leading-tight">
-            <span className="text-white">Hack</span><span className="text-[#EED244]">Themes</span>
+            <span className="text-white">Hack</span><span className="text-primary">Themes</span>
           </h1>
 
           <p className="text-[#a1a1aa] text-[15px] sm:text-[17px] max-w-2xl mx-auto font-normal">

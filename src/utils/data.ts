@@ -328,7 +328,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Deekshitha',
     role: 'Vice President',
-    image: '/placeholder.png',
+    image: '/dee.jpeg',
     linkedin: 'https://www.linkedin.com/in/deekshitha-bandaru/'
   }, {
     name: 'Alina Paul',
@@ -343,7 +343,7 @@ export const TEAM_MEMBERS = [
     linkedin: 'https://www.linkedin.com/in/nirbhik-chaki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
-    name: 'Vishwak',
+    name: 'Vishwak Sen',
     role: 'Event Management Head',
     image: '/vishwak3.png',
     linkedin: 'https://www.linkedin.com/in/vishwaksen21/'
@@ -375,7 +375,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Deeksha Pandu',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/deeksha1.jpeg',
     linkedin: 'https://www.linkedin.com/in/deeksha-pandu-29b09732a?utm_source=share_via&utm_content=profile&utm_medium=member_android'
   },
   {
