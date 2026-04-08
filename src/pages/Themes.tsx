@@ -14,73 +14,45 @@ type ThemeOverride = {
 const OVERRIDE_THEMES: ThemeOverride[] = [
   {
     id: 1,
-    title: 'Student Innovation using IndiaStack',
-    description: "Leverage IndiaStack's digital infrastructure (Aadhaar, UPI, DigiLocker, etc.) to create innovative solutions that enhance governance, finance, and public services.",
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3v18h18M7 14l4-4 4 4 6-6" />
-        <circle cx="7" cy="14" r="1.5" fill="#EED244" stroke="none" />
-        <circle cx="11" cy="10" r="1.5" fill="#EED244" stroke="none" />
-        <circle cx="15" cy="14" r="1.5" fill="#EED244" stroke="none" />
-        <circle cx="21" cy="8" r="1.5" fill="#EED244" stroke="none" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v4m0 4v4m-4-8v8m8-6v6" />
-      </svg>
-    ),
-    buttons: ['Financial Inclusion', 'E-Governance', 'Secure Digital Identity'],
-  },
-  {
-    id: 2,
-    title: 'Urban Planning',
-    description: 'Design smart, sustainable, and tech-driven urban platforms to optimize transportation, housing, and public infrastructure for better city living.',
+    title: 'Smart Cities & Infrastructure',
+    description: 'Smart Cities focus on building sustainable, efficient, and technology-driven urban environments. This includes urban planning, smart transportation, and energy-efficient systems powered by AI and data analytics.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16M14 21V9h3v12M9 7h2m-2 4h2m-2 4h2m-2 4h2M15 11h1M3 21h18" />
         <path d="M5 21v-4a2 2 0 012-2h1M5 15h2" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} />
       </svg>
     ),
-    buttons: ['Smart Traffic Management', 'Sustainable Waste Mgmt', 'Water Conservation'],
+    buttons: ['Urban Planning', 'Smart Traffic', 'Energy Optimization'],
   },
   {
-    id: 3,
-    title: 'Education',
-    description: 'Develop AI-driven, personalized, and accessible learning platforms to improve education quality, inclusivity, and skill development.',
+    id: 2,
+    title: 'Education & Digital Empowerment',
+    description: 'Education and digital platforms are transforming how knowledge is delivered and accessed. With initiatives like IndiaStack, technology is enabling inclusive and personalized learning.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3l9 5-9 5-9-5 9-5z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 13v7m0 0a4 4 0 01-4-4v-3m4 7a4 4 0 004-4v-3M5.5 6.5v7.36c0 .7.33 1.36.88 1.77A9.97 9.97 0 0012 18.5a9.97 9.97 0 005.62-1.87c.55-.41.88-1.07.88-1.77V6.5" />
       </svg>
     ),
-    buttons: ['Personalized Learning', 'Gamified Education', 'AR/VR Experiences'],
+    buttons: ['Personalized Learning', 'Skill Development', 'Digital Identity'],
+  },
+  {
+    id: 3,
+    title: 'Health, Well-being & AI for Impact',
+    description: 'Technology and AI are revolutionizing healthcare by improving accessibility, diagnostics, and patient care. AI-driven systems can help in early disease detection and inclusive delivery.',
+    icon: (
+      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4c-3 0-5 2-5 4.5 0 1 .5 2 1 2.5-.5 1-1 2-1 3.5 0 2.5 2.5 4.5 5 4.5s5-2 5-4.5c0-1.5-.5-2.5-1-3.5.5-.5 1-1.5 1-2.5C17 6 15 4 12 4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v15" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 10h6M9 14h6" />
+      </svg>
+    ),
+    buttons: ['AI Diagnostics', 'Telemedicine', 'Mental Health Support'],
   },
   {
     id: 4,
-    title: 'Energy Efficiency in AI/Computing',
-    description: 'Optimize AI models and computing systems to reduce energy consumption, improve sustainability, and lower carbon footprints.',
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 16a5 5 0 116 0V17H9v-1z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v2M4.22 4.22l1.42 1.42M19.78 4.22l-1.42 1.42M2 12h2M20 12h2M10 21h4" />
-      </svg>
-    ),
-    buttons: ['Efficient AI Algorithms', 'Green Computing', 'Resource Allocation'],
-  },
-  {
-    id: 5,
-    title: 'Health and Inclusivity',
-    description: 'Create solutions that improve healthcare accessibility, particularly for underserved communities, through telemedicine, AI diagnostics, and digital health records.',
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v20" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 8c0-2 2-3 4-3s4 1 4 3c0 3-8 3-8 6 0 2 2 3 4 3s4-1 4-3" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4l-4-2m4 2l4-2" />
-      </svg>
-    ),
-    buttons: ['Telemedicine', 'AI Diagnostics', 'Digital Health Records'],
-  },
-  {
-    id: 6,
-    title: 'Agriculture',
-    description: 'Technology can revolutionize farming, food production, and sustainability, making agriculture more efficient and resilient to climate change.',
+    title: 'Agriculture & Food Systems',
+    description: 'Agriculture is a critical sector that can benefit from technology to improve productivity, sustainability, and resilience. Smart farming techniques can enhance crop yield and reduce wastage.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 22V10" />
@@ -92,53 +64,12 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
         <path d="M12 2C16 2 18 4 18 6C18 8 16 8 12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    buttons: ['Smart Irrigation', 'Crop Monitoring', 'Precision Agriculture'],
+    buttons: ['Precision Agriculture', 'Smart Irrigation', 'Crop Monitoring'],
   },
   {
-    id: 7,
-    title: 'Animal Welfare',
-    description: 'Technology can improve animal welfare, rescue efforts, and conservation, ensuring better care and protection.',
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 21.5C9.5 21.5 7.5 19.5 7 17C6.5 14.5 8 12.5 9 11.5C10 10.5 11 11 12 12C13 11 14 10.5 15 11.5C16 12.5 17.5 14.5 17 17C16.5 19.5 14.5 21.5 12 21.5z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="7" cy="10" r="2" />
-        <circle cx="11" cy="6" r="2" />
-        <circle cx="15.5" cy="7" r="2" />
-        <circle cx="18" cy="11.5" r="2" />
-      </svg>
-    ),
-    buttons: ['Wildlife Monitoring', 'Smart Rescue & Adoption', 'Veterinary AI'],
-  },
-  {
-    id: 8,
-    title: 'FinTech & Financial Inclusion',
-    description: 'FinTech is transforming India’s financial ecosystem by making banking, payments, and credit accessible to all through UPI, Aadhaar, and mobile solutions.',
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-1" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 14h5v-4h-5v4z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9h.01" />
-      </svg>
-    ),
-    buttons: ['Microfinance Solutions', 'Digital Lending Platforms', 'SDG 1, 8, 9, 10'],
-  },
-  {
-    id: 9,
-    title: 'AI for Impact',
-    description: 'Artificial Intelligence is driving social transformation in India across healthcare, education, agriculture, and governance.',
-    icon: (
-      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4c-3 0-5 2-5 4.5 0 1 .5 2 1 2.5-.5 1-1 2-1 3.5 0 2.5 2.5 4.5 5 4.5s5-2 5-4.5c0-1.5-.5-2.5-1-3.5.5-.5 1-1.5 1-2.5C17 6 15 4 12 4z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4v15" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 10h6M9 14h6" />
-      </svg>
-    ),
-    buttons: ['Disease Prediction', 'Smart Learning Systems', 'SDG 3, 4, 9, 11'],
-  },
-  {
-    id: 10,
+    id: 5,
     title: 'Climate Tech & Sustainability',
-    description: 'Solving environmental challenges through innovation. In India, there is a growing need for renewable energy and sustainable agriculture.',
+    description: 'Climate technology focuses on addressing environmental challenges through innovative solutions such as renewable energy, waste management, and sustainable resource usage.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
@@ -146,7 +77,20 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12h18" />
       </svg>
     ),
-    buttons: ['Solar Energy Solutions', 'EV Infrastructure', 'SDG 7, 11, 12, 13'],
+    buttons: ['Renewable Energy', 'EV Infrastructure', 'Pollution Monitoring'],
+  },
+  {
+    id: 6,
+    title: 'Financial Inclusion & Social Good',
+    description: 'Financial inclusion ensures that everyone has access to banking, credit, and digital financial services. Technology also supports social good initiatives such as community development.',
+    icon: (
+      <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2v-1" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 14h5v-4h-5v4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9h.01" />
+      </svg>
+    ),
+    buttons: ['Digital Payments', 'Microfinance', 'Social Good Platforms'],
   }
 ]
 
@@ -349,7 +293,7 @@ function ThemeCard({ theme, index }: { theme: ThemeOverride; index: number }) {
             </span>
           ))}
           <span className="px-[14px] py-[6px] text-[11px] font-medium rounded-full bg-[#EED244]/10 text-[#EED244] border border-[#EED244]/20 flex items-center gap-1 mt-auto">
-            +6 Solutions {theme.id === 1 ? <span className="text-[13px] leading-none ml-0.5 mt-[-1px]">›</span> : ''}
+            View Details <span className="text-[13px] leading-none ml-0.5 mt-[-1px]">›</span>
           </span>
         </div>
         
