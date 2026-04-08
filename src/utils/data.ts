@@ -246,13 +246,13 @@ export const TEAM_MEMBERS = [
   }, {
     name: 'Alina Paul',
     role: 'Core Member',
-    image: '/placeholder.png',
+    image: '/alina.jpeg',
     linkedin: 'https://www.linkedin.com/in/alina-paul-340a2026t6974pp/'
   },
   {
     name: 'Nirbhik',
     role: 'PR Head',
-    image: '/placeholder.png',
+    image: '/nirbhik.jpeg',
     linkedin: 'https://www.linkedin.com/in/nirbhik-chaki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
@@ -306,7 +306,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Sunil',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/sunil.jpeg',
     linkedin: 'https://www.linkedin.com/in/sunil-kumar-1093a3338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
   },
   {
