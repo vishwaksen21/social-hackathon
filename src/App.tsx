@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import MainLayout from './layouts/MainLayout'
 import Background from './components/Background'
-import CursorGlow from './components/CursorGlow'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -13,6 +12,7 @@ const Prizes = lazy(() => import('./pages/Prizes'))
 const Team = lazy(() => import('./pages/Team'))
 const Results = lazy(() => import('./pages/Results'))
 const FAQs = lazy(() => import('./pages/FAQs'))
+const Contact = lazy(() => import('./pages/Contact'))
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -39,6 +39,7 @@ function AnimatedRoutes() {
           <Route path="/team" element={<Team />} />
           <Route path="/results" element={<Results />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -49,7 +50,6 @@ function App() {
   return (
     <BrowserRouter>
       <Background />
-      <CursorGlow />
       <MainLayout>
         <Suspense fallback={
           <div className="flex items-center justify-center min-h-screen">

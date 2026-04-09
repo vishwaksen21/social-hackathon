@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Linkedin } from 'lucide-react'
+import { Linkedin, Phone } from 'lucide-react'
 import { TEAM_MEMBERS } from '../utils/data'
 import { useState } from 'react'
 
@@ -8,6 +8,7 @@ type Member = {
   role: string
   image: string
   linkedin?: string
+  phone?: string
 }
 
 const TeamMemberCard = ({ member, index }: { member: Member; index: number }) => {
@@ -26,9 +27,7 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
 
       {/* Base Card */}
       <div
-        className={`relative transition-all duration-300 ${
-          open ? 'opacity-0 scale-95' : 'group-hover:opacity-0 group-hover:scale-95'
-        }`}
+        className={`relative transition-all duration-300 md:group-hover:opacity-0 md:group-hover:scale-95`}
       >
         <div className="card-glass rounded-2xl pt-14 md:pt-16 pb-5 px-3 md:px-4 border border-white/10 bg-white/[0.02] backdrop-blur-xl shadow-lg min-h-[120px] flex flex-col justify-end">
           <h3 className="text-sm md:text-lg font-poppins font-bold text-center text-primary">
@@ -38,10 +37,34 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
           <p className="text-center text-white/50 font-inter text-[10px] md:text-xs tracking-wider uppercase font-semibold mt-1">
             {member.role}
           </p>
+
+          <div className="flex justify-center items-center gap-3 mt-4 md:hidden z-20 pointer-events-auto">
+            {member.phone && (
+              <a
+                href={`tel:${member.phone.replace(/\s+/g, '')}`}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all bg-black/50 backdrop-blur-md"
+                onClick={(e) => e.stopPropagation()}
+                title={member.phone}
+              >
+                <Phone className="h-4 w-4" />
+              </a>
+            )}
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all bg-black/50 backdrop-blur-md"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Avatar */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
           <img
             src={imageUrl}
             alt={member.name}
@@ -50,14 +73,9 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
         </div>
       </div>
 
-      {/* Overlay (Hover + Mobile Tap) */}
+      {/* Overlay (Desktop Hover Only) */}
       <div
-        className={`absolute inset-0 rounded-2xl transition-all duration-300 flex flex-col items-center justify-center p-4 overflow-hidden border border-primary/30 shadow-[0_0_25px_rgba(255,255,0,0.2)]
-        ${
-          open
-            ? 'opacity-100 scale-100'
-            : 'opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100'
-        }`}
+        className={`absolute inset-0 rounded-2xl transition-all duration-300 hidden md:flex flex-col items-center justify-center p-4 overflow-hidden border border-primary/30 shadow-[0_0_25px_rgba(255,255,0,0.2)] opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100 z-10 pointer-events-none group-hover:pointer-events-auto`}
       >
 
         {/* Background */}
@@ -77,17 +95,29 @@ const TeamMemberCard = ({ member, index }: { member: Member; index: number }) =>
             {member.role}
           </p>
 
-          {member.linkedin && (
-            <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
-            </a>
-          )}
+          <div className="flex items-center gap-3 mt-1 pointer-events-auto">
+            {member.phone && (
+              <a
+                href={`tel:${member.phone.replace(/\s+/g, '')}`}
+                className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all"
+                onClick={(e) => e.stopPropagation()}
+                title={member.phone}
+              >
+                <Phone className="h-4 w-4 md:h-5 md:w-5" />
+              </a>
+            )}
+            {member.linkedin && (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full border border-primary text-primary hover:bg-primary hover:text-black transition-all"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </motion.div>

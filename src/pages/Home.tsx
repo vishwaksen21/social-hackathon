@@ -20,15 +20,13 @@ export default function Home() {
   const marqueeText = `${THEMES.map((t) => t.title).join(' • ')} • `.toUpperCase()
 
   return (
-    <div className="flex flex-col pt-4 md:pt-16">
+    <div className="flex flex-col pt-4 md:pt-16 overflow-x-hidden">
 
       {/* HERO */}
-      <section className="relative flex flex-col px-4 sm:px-6 pb-12 pt-6 md:pt-10 max-w-6xl mx-auto w-full mt-6 md:mt-0">
-
-
+      <section className="relative flex flex-col px-4 sm:px-6 pb-12 pt-6 md:pt-10 max-w-6xl mx-auto w-full mt-4 md:mt-0 overflow-hidden">
 
         <motion.div
-          className="flex flex-col items-start gap-8 md:gap-10"
+          className="flex flex-col items-start gap-6 md:gap-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -46,8 +44,8 @@ export default function Home() {
           {/* Title */}
           <motion.h1
             variants={itemVariants}
-            className="font-poppins font-black uppercase leading-[1.1] md:leading-[0.9] text-white"
-            style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)' }}
+            className="font-poppins font-black uppercase leading-[1.1] text-white"
+            style={{ fontSize: 'clamp(2.2rem, 10vw, 7.5rem)' }}
           >
             <span className="block">THE</span>
             <span className="block gradient-text-yellow drop-shadow-[0_0_20px_rgba(255,255,0,0.25)]">
@@ -59,25 +57,25 @@ export default function Home() {
           </motion.h1>
 
           {/* Subtitle */}
-          <motion.div variants={itemVariants} className="max-w-lg">
+          <motion.div variants={itemVariants} className="max-w-lg space-y-2">
             <p className="font-poppins text-lg sm:text-xl font-semibold text-white">
               CMR Institute of Technology
             </p>
-            <p className="mt-2 text-white/60 font-inter text-sm sm:text-base leading-relaxed">
+            <p className="text-white/60 font-inter text-sm sm:text-base leading-relaxed">
               Bringing together innovators and builders to craft impactful solutions
               for real-world challenges through technology and creativity.
             </p>
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto">
 
             <MagneticButton>
               <motion.a
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
+                className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -90,7 +88,7 @@ export default function Home() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   to="/about"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 transition-all"
+                  className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 transition-all"
                 >
                   Learn More
                   <ChevronDown size={16} />
@@ -110,16 +108,26 @@ export default function Home() {
 
         </motion.div>
 
-        {/* Prize Badge → FIXED FOR MOBILE */}
+        {/* Prize Badge */}
         <motion.div
-          className="absolute top-4 right-4 md:top-16 md:right-6 flex md:flex flex-col items-center justify-center w-20 h-20 md:w-28 md:h-28 rounded-full border border-primary/50 bg-primary/10 backdrop-blur-xl shadow-[0_0_30px_rgba(255,255,0,0.25)]"
+          className="absolute top-4 right-2 sm:top-6 sm:right-6 md:top-16 md:right-12 
+          w-20 h-20 sm:w-28 sm:h-28 md:w-44 md:h-44 
+          flex flex-col items-center justify-center 
+          rounded-full border border-primary/40 bg-primary/10 backdrop-blur-xl 
+          shadow-[0_0_30px_rgba(255,255,0,0.25)] z-10"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.8, type: "spring", stiffness: 200, damping: 20 }}
         >
-          <span className="text-white/50 text-[8px] md:text-[10px] uppercase">Prize</span>
-          <span className="text-primary font-poppins font-black text-sm md:text-xl">₹50K</span>
-          <span className="text-white/50 text-[8px] md:text-[10px]">Pool</span>
+          <span className="text-white/60 font-montserrat font-bold text-[8px] sm:text-[10px] md:text-sm uppercase tracking-[0.2em] mb-1">
+            Prize
+          </span>
+          <span className="text-primary font-poppins font-black text-xl sm:text-3xl md:text-5xl leading-none">
+            ₹50K
+          </span>
+          <span className="text-white/60 font-montserrat font-medium text-[8px] sm:text-[10px] md:text-sm tracking-[0.2em] mt-1">
+            Pool
+          </span>
         </motion.div>
 
         {/* Stats */}
@@ -127,11 +135,11 @@ export default function Home() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="w-full mt-14 md:mt-20 border-t border-white/5 pt-8 md:pt-12"
+          className="w-full mt-10 sm:mt-14 md:mt-20 border-t border-white/5 pt-8 md:pt-12"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {STATS.map((stat) => (
-              <InteractiveCard key={stat.label} className="card-glass p-4 md:p-6 text-center group">
+              <InteractiveCard key={stat.label} className="card-glass p-3 sm:p-4 md:p-6 text-center group">
                 <div className="font-poppins text-lg md:text-xl font-black text-primary mb-1">
                   {stat.value}
                 </div>

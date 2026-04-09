@@ -56,12 +56,12 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 22V10" />
-        <path d="M12 10C8 10 6 12 6 14C6 16 8 16 12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 10C16 10 18 12 18 14C18 16 16 16 12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 6C8 6 6 8 6 10C6 12 8 12 12 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 6C16 6 18 8 18 10C18 12 16 12 12 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 2C8 2 6 4 6 6C6 8 8 8 12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M12 2C16 2 18 4 18 6C18 8 16 8 12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 10C8 10 6 12 6 14C6 16 8 16 12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 10C16 10 18 12 18 14C18 16 16 16 12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 6C8 6 6 8 6 10C6 12 8 12 12 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 6C16 6 18 8 18 10C18 12 16 12 12 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 2C8 2 6 4 6 6C6 8 8 8 12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 2C16 2 18 4 18 6C18 8 16 8 12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     buttons: ['Precision Agriculture', 'Smart Irrigation', 'Crop Monitoring'],
@@ -112,33 +112,33 @@ export default function Themes() {
   return (
     <div className="min-h-screen bg-[#090909] relative overflow-hidden font-inter text-white w-full flex items-center justify-center">
       {/* Subtle geometric repeating wireframe pattern of interconnected diamonds */}
-      <div 
-        className="absolute inset-0 z-0 opacity-40 pointer-events-none" 
+      <div
+        className="absolute inset-0 z-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.05'%3E%3Cpath d='M40 0L80 40L40 80L0 40z'/%3E%3Cpath d='M0 0L80 80M80 0L0 80'/%3E%3C/g%3E%3C/svg%3E")`,
           backgroundSize: '80px 80px'
         }}
       />
-      
-      <div className="relative z-10 w-full max-w-[1300px] mx-auto px-6 sm:px-8 md:px-12 pt-20 pb-28">
+
+      <div className="relative z-10 w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-12 pt-16 md:pt-20 pb-20 md:pb-28">
 
         {/* Title Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16 md:mb-20"
+          className="text-center mb-12 md:mb-20"
         >
-          <h1 className="font-poppins font-black text-[2.5rem] sm:text-5xl md:text-[5rem] mb-4 md:mb-6 tracking-tight leading-tight">
+          <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-[5rem] mb-4 md:mb-6 tracking-tight leading-tight">
             <span className="text-white">Hack</span><span className="text-primary">Themes</span>
           </h1>
 
-          <p className="text-[#a1a1aa] text-[15px] sm:text-[17px] max-w-2xl mx-auto font-normal">
+          <p className="text-[#a1a1aa] text-[15px] sm:text-[17px] max-w-2xl mx-auto font-normal px-4">
             Choose a domain and build impactful solutions for real-world problems.
           </p>
         </motion.div>
 
         {/* Dynamic Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8 relative z-10">
           {OVERRIDE_THEMES.map((theme, i) => (
             <div key={theme.id} onClick={() => setSelectedThemeId(theme.id)} className="cursor-pointer h-full outline-none focus:outline-none">
               <ThemeCard theme={theme} index={i} />
@@ -146,7 +146,7 @@ export default function Themes() {
           ))}
         </div>
       </div>
-      
+
       <AnimatePresence>
         {selectedThemeId && selectedOverride && selectedOriginal && (
           <motion.div
@@ -154,7 +154,7 @@ export default function Themes() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/70 backdrop-blur-md cursor-pointer"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 md:p-8 bg-black/80 backdrop-blur-md cursor-pointer"
             onClick={() => setSelectedThemeId(null)}
           >
             <motion.div
@@ -162,76 +162,86 @@ export default function Themes() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-4xl max-h-[85vh] overflow-y-auto bg-[#141414] border border-white/10 rounded-[28px] shadow-[0_0_80px_rgba(0,0,0,0.8)] cursor-auto custom-scrollbar"
+              // Changed container: removed overflow-y-auto here, made it a flex column container instead
+              className="relative w-full max-w-4xl max-h-[90vh] flex flex-col bg-[#141414] border border-white/10 rounded-[24px] sm:rounded-[28px] shadow-[0_0_80px_rgba(0,0,0,0.8)] cursor-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Top ambient glow */}
-              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#EED244]/80 to-transparent opacity-60" />
-              <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#EED244]/5 to-transparent pointer-events-none" />
-              
-              <div className="relative p-8 md:p-12 flex flex-col md:flex-row gap-10 md:gap-12 items-start">
-                
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#EED244]/80 to-transparent opacity-60 z-10" />
+              <div className="absolute inset-x-0 top-0 h-32 sm:h-40 bg-gradient-to-b from-[#EED244]/5 to-transparent pointer-events-none z-10" />
+
+              {/* Close Button - Stays fixed relative to the modal container, outside the scroll area */}
+              <button
+                onClick={() => setSelectedThemeId(null)}
+                className="absolute top-4 right-4 sm:top-5 sm:right-5 z-50 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#1e1e1e]/80 hover:bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+                aria-label="Close modal"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Scrollable Content Area */}
+              <div className="relative overflow-y-auto custom-scrollbar p-6 pt-16 sm:p-8 sm:pt-10 md:p-12 flex flex-col md:flex-row gap-8 md:gap-12 items-start z-20">
+
                 {/* Left side: Icon, Title, Desc */}
-                <div className="flex-1 space-y-6 md:sticky md:top-0">
-                  <div className="flex flex-col sm:flex-row items-start gap-5">
-                    <div className="w-16 h-16 rounded-[20px] bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0">
-                      {selectedOverride.icon}
+                <div className="flex-1 space-y-5 sm:space-y-6 md:sticky md:top-0">
+                  <div className="flex flex-row items-start gap-4 sm:gap-5 pr-8 sm:pr-12 md:pr-0">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-[16px] sm:rounded-[20px] bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0">
+                      <div className="scale-75 sm:scale-100">
+                        {selectedOverride.icon}
+                      </div>
                     </div>
-                    <div className="pt-1">
-                      <div className="flex items-center gap-3 mb-2">
-                         <div className="w-[34px] h-[34px] rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center shrink-0">
-                          <span className="text-xs font-bold text-[#EED244] font-mono tracking-widest pl-[1px]">
+                    <div className="pt-0.5 sm:pt-1">
+                      <div className="flex items-center gap-3 mb-1.5 sm:mb-2">
+                        <div className="w-[28px] h-[28px] sm:w-[34px] sm:h-[34px] rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center shrink-0">
+                          <span className="text-[10px] sm:text-xs font-bold text-[#EED244] font-mono tracking-widest pl-[1px]">
                             {selectedOverride.id.toString().padStart(2, '0')}
                           </span>
                         </div>
                       </div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-[1.2]">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-[1.2]">
                         {selectedOverride.title}
                       </h2>
                     </div>
                   </div>
 
+                  {/* Added missing description implementation */}
+                  <p className="text-[#a1a1aa] text-[14px] sm:text-[15px] leading-relaxed">
+                    {selectedOverride.description}
+                  </p>
                 </div>
 
                 {/* Right side: Focuses list */}
-                <div className="flex-1 w-full bg-white/[0.02] rounded-[24px] p-6 sm:p-8 border border-white/[0.05]">
-                  <h3 className="text-[#EED244] font-semibold text-sm tracking-wider uppercase mb-6 flex items-center gap-2.5">
+                <div className="flex-1 w-full bg-white/[0.02] rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 md:p-8 border border-white/[0.05]">
+                  <h3 className="text-[#EED244] font-semibold text-xs sm:text-sm tracking-wider uppercase mb-5 sm:mb-6 flex items-center gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#EED244] shadow-[0_0_8px_rgba(238,210,68,0.8)]"></span>
                     Detailed Focus Areas
                   </h3>
-                  
-                  <ul className="space-y-4">
+
+                  <ul className="space-y-3 sm:space-y-4">
                     {selectedOriginal.focuses.map((focus, idx) => (
-                      <motion.li 
+                      <motion.li
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + idx * 0.05 }}
-                        key={idx} 
-                        className="flex gap-4 items-start"
+                        key={idx}
+                        className="flex gap-3 sm:gap-4 items-start"
                       >
-                        <div className="mt-[2px] shrink-0 w-5 h-5 rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center">
-                          <svg className="w-3 h-3 text-[#EED244]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className="mt-[3px] shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center">
+                          <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#EED244]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className="text-[14px] sm:text-[15px] text-gray-300 leading-snug">{focus}</span>
+                        <span className="text-[13px] sm:text-[14px] md:text-[15px] text-gray-300 leading-snug">
+                          {focus}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
-                
+
               </div>
-              
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedThemeId(null)}
-                className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white/50 hover:text-white transition-colors"
-                aria-label="Close modal"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
             </motion.div>
           </motion.div>
         )}
@@ -252,43 +262,43 @@ function ThemeCard({ theme, index }: { theme: ThemeOverride; index: number }) {
     >
       {/* Subtle edge glow / top light */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.15] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      
-      <div className="flex flex-col h-full p-6 md:p-[30px] space-y-6">
-        
+
+      <div className="flex flex-col h-full p-5 sm:p-6 md:p-[30px] space-y-5 sm:space-y-6">
+
         {/* Header: Icon, Title, Num */}
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex items-center gap-3">
+        <div className="flex items-start justify-between gap-3 sm:gap-4">
+          <div className="flex items-start sm:items-center gap-3">
             <div className="shrink-0 flex items-center justify-center">
-              {theme.icon}
+              <div className="scale-90 sm:scale-100">{theme.icon}</div>
             </div>
-            <h3 className="text-white font-semibold text-[17px] md:text-[19px] leading-[1.3] tracking-wide">
+            <h3 className="text-white font-semibold text-[16px] sm:text-[17px] md:text-[19px] leading-[1.3] tracking-wide pt-1 sm:pt-0">
               {theme.title}
             </h3>
           </div>
-          
+
           {/* Number badge */}
-          <div className="w-[30px] h-[30px] rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center shrink-0 ml-1">
-            <span className="text-[11px] font-bold text-[#EED244] font-mono tracking-widest pl-[1px]">
+          <div className="w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] rounded-full bg-[#EED244]/10 border border-[#EED244]/20 flex items-center justify-center shrink-0 ml-1">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#EED244] font-mono tracking-widest pl-[1px]">
               {theme.id.toString().padStart(2, '0')}
             </span>
           </div>
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-wrap gap-[8px] pt-1 flex-grow items-start content-start">
+        <div className="flex flex-wrap gap-2 pt-1 flex-grow items-start content-start">
           {theme.buttons.map((btn, j) => (
             <span
               key={j}
-              className="px-[14px] py-[6px] text-[11px] font-medium rounded-full bg-white/[0.04] text-[#d4d4d8] border border-white/[0.08]"
+              className="px-3 py-1.5 sm:px-[14px] sm:py-[6px] text-[10px] sm:text-[11px] font-medium rounded-full bg-white/[0.04] text-[#d4d4d8] border border-white/[0.08]"
             >
               {btn}
             </span>
           ))}
-          <span className="px-[14px] py-[6px] text-[11px] font-medium rounded-full bg-[#EED244]/10 text-[#EED244] border border-[#EED244]/20 flex items-center gap-1 mt-auto">
+          <span className="px-3 py-1.5 sm:px-[14px] sm:py-[6px] text-[10px] sm:text-[11px] font-medium rounded-full bg-[#EED244]/10 text-[#EED244] border border-[#EED244]/20 flex items-center gap-1 mt-auto">
             View Details <span className="text-[13px] leading-none ml-0.5 mt-[-1px]">›</span>
           </span>
         </div>
-        
+
       </div>
     </InteractiveCard>
   )

@@ -12,13 +12,14 @@ export const NAV_LINKS = [
   { label: 'Team', path: '/team' },
   { label: 'Results', path: '/results' },
   { label: 'FAQs', path: '/faqs' },
+  { label: 'Contact', path: '/contact' },
 ]
 
 export const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/socialhackathon_cmrit?utm_source=qr&igsh=enExdmZpNHl1OHBw',
   linkedin: 'https://www.linkedin.com/in/innovation-club-4847a2333/',
   email: 'mailto:innovationclub@cmrit.ac.in',
-  phone: '+91 7975790986',
+  phone: '+91 7019151370',
 }
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
@@ -236,41 +237,48 @@ export const TEAM_MEMBERS = [
     name: 'Daniya',
     role: 'President',
     image: '/daniya.jpeg',
-    linkedin: 'https://www.linkedin.com/in/daniya-john-6b657a304/'
+    linkedin: 'https://www.linkedin.com/in/daniya-john-6b657a304/',
+    phone: '+91 9535173412'
   },
   {
     name: 'Deekshitha',
     role: 'Vice President',
     image: '/dee.jpeg',
-    linkedin: 'https://www.linkedin.com/in/deekshitha-bandaru/'
-  }, {
+    linkedin: 'https://www.linkedin.com/in/deekshitha-bandaru/',
+    phone: '+91 8660261627'
+  },
+  {
     name: 'Alina Paul',
     role: 'Core Member',
     image: '/alina.jpeg',
-    linkedin: 'https://www.linkedin.com/in/alina-paul-340a2026t6974pp/'
+    linkedin: 'https://www.linkedin.com/in/alina-paul-340a2026t6974pp/',
+    phone: '+91 7975790986'
   },
   {
     name: 'Nirbhik',
     role: 'PR Head',
     image: '/nirbhik.jpeg',
-    linkedin: 'https://www.linkedin.com/in/nirbhik-chaki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    linkedin: 'https://www.linkedin.com/in/nirbhik-chaki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    phone: '+91 8861721676'
   },
   {
     name: 'Vishwak Sen',
     role: 'Event Management Head',
     image: '/vishwak3.png',
-    linkedin: 'https://www.linkedin.com/in/vishwaksen21/'
+    linkedin: 'https://www.linkedin.com/in/vishwaksen21/',
+    phone: '+91 7019151370'
   },
   {
     name: 'Angelina',
     role: 'Social Media Head',
     image: '/anje.jpeg',
-    linkedin: 'https://www.linkedin.com/in/angelina-georgy/'
+    linkedin: 'https://www.linkedin.com/in/angelina-georgy/',
+    phone: '+91 9008375961'
   },
   {
     name: 'Harris',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/harris.jpeg',
     linkedin: 'https://linkedin.com/'
   },
   {
