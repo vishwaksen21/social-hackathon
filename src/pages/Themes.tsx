@@ -191,9 +191,6 @@ export default function Themes() {
                     </div>
                   </div>
 
-                  <p className="text-gray-300 text-[15px] sm:text-base leading-relaxed pt-2">
-                    {selectedOverride.description}
-                  </p>
                 </div>
 
                 {/* Right side: Focuses list */}
@@ -277,13 +274,8 @@ function ThemeCard({ theme, index }: { theme: ThemeOverride; index: number }) {
           </div>
         </div>
 
-        {/* Description */}
-        <p className="text-[#a1a1aa] text-[13px] md:text-[14px] leading-[1.65] flex-grow">
-          {theme.description}
-        </p>
-
         {/* Buttons */}
-        <div className="flex flex-wrap gap-[8px] pt-1">
+        <div className="flex flex-wrap gap-[8px] pt-1 flex-grow items-start content-start">
           {theme.buttons.map((btn, j) => (
             <span
               key={j}
