@@ -26,7 +26,7 @@ export const SOCIAL_LINKS = {
 export const STATS = [
   { value: '24H', label: 'Hackathon Duration' },
   { value: '₹50K', label: 'Prize Pool' },
-  { value: '2-4', label: 'Team Size' },
+  { value: '1-4', label: 'Team Size' },
   { value: '100+', label: 'Teams Registered' },
 ]
 
@@ -187,7 +187,7 @@ export const FAQS = [
   },
   {
     q: 'Who can participate?',
-    a: 'SH is open to undergraduate students, and anyone passionate about using technology to solve social problems. Teams can consist of 2–4 members with diverse skill sets.',
+    a: 'SH is open to undergraduate students, and anyone passionate about using technology to solve social problems. Teams can consist of 1–4 members with diverse skill sets.',
   },
   {
     q: 'What about accommodation?',
