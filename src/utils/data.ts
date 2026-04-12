@@ -1,6 +1,6 @@
 // ─── Site-wide content ────────────────────────────────────────────────────────
 
-export const HACKATHON_SLUG = 'the-social-hackathon' // ← update this to your actual Devfolio slug
+export const HACKATHON_SLUG = 'social-hackathon26'
 export const REGISTER_URL = 'https://forms.gle/rhsDzdD9VukHzfuj6'
 export const EVENT_DATE = new Date('May 13, 2026 00:00:00')
 

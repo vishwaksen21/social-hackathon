@@ -125,11 +125,10 @@ export default function Footer() {
             className="opacity-70 hover:opacity-100 transition-opacity duration-300"
           >
             <img
-              src="https://assets.devfolio.co/hackathons/logo/logo.svg"
+              src="/dev.png"
               alt="Devfolio"
               width="130"
               height="30"
-              style={{ filter: 'brightness(0) invert(1)' }}
             />
           </a>
         </div>
