@@ -79,41 +79,37 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Theme Preview */}
-          <motion.div variants={itemVariants} className="w-full max-w-lg">
-            <div className="card-glass p-2 sm:p-3">
-              <img
-                src="/03.png"
-                alt="Theme 03"
-                className="w-full h-auto rounded-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </motion.div>
-
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto mt-2">
 
-            {/* Devfolio Apply Button */}
+            {/* Custom Devfolio Apply Button */}
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
               className="flex-shrink-0"
             >
-              <div
-                className="apply-button"
-                data-hackathon-slug={HACKATHON_SLUG}
-                data-button-theme="dark"
-                style={{ height: '44px', width: '312px' }}
-              />
+              <a 
+                href={`https://${HACKATHON_SLUG}.devfolio.co`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 px-6 py-2.5 bg-[#3770FF] text-white rounded-xl hover:bg-blue-600 transition-all font-semibold font-inter shadow-lg overflow-hidden border border-[#3770FF]"
+              >
+                <div className="bg-white p-1 rounded-sm flex items-center justify-center">
+                  <img
+                    src="/devfolio-logo.png"
+                    alt="Devfolio"
+                    className="w-5 h-5 object-contain"
+                  />
+                </div>
+                <span className="text-lg">Apply with Devfolio</span>
+              </a>
             </motion.div>
 
             <MagneticButton>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   to="/about"
-                  className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 transition-all"
+                  className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 transition-all shadow-lg"
                 >
                   Learn More
                   <ChevronDown size={16} />

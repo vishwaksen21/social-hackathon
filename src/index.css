@@ -70,6 +70,7 @@
     overflow: hidden !important;
     display: inline-block;
     border-radius: 0.25rem;
+    background-color: transparent !important;
   }
   
   .apply-button iframe {
