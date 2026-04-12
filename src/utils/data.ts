@@ -290,7 +290,7 @@ export const TEAM_MEMBERS = [
   {
     name: 'Rakshitha',
     role: 'Co-ordinator',
-    image: '/placeholder.png',
+    image: '/rak.jpeg',
     linkedin: 'http://www.linkedin.com/in/rakshitha-j-3b5b97352'
   },
   {
