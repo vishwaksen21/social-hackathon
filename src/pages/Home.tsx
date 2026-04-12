@@ -18,15 +18,15 @@ const itemVariants = {
 }
 
 export default function Home() {
-  // Load the Devfolio Apply SDK once per mount
+  // Load the Devfolio Apply SDK safely
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://apply.devfolio.co/v2/sdk.js'
-    script.async = true
-    script.defer = true
-    document.body.appendChild(script)
-    return () => {
-      document.body.removeChild(script)
+    // Only add if not already present to prevent StrictMode dupes
+    if (!document.querySelector('script[src="https://apply.devfolio.co/v2/sdk.js"]')) {
+      const script = document.createElement('script')
+      script.src = 'https://apply.devfolio.co/v2/sdk.js'
+      script.async = true
+      script.defer = true
+      document.body.appendChild(script)
     }
   }, [])
   const marqueeText = `${THEMES.map((t) => t.title).join(' • ')} • `.toUpperCase()
@@ -80,29 +80,20 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto mt-2">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto mt-2 z-20 relative">
 
-            {/* Custom Devfolio Apply Button */}
+            {/* Official Devfolio Apply Button */}
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.97 }}
               className="flex-shrink-0"
             >
-              <a 
-                href={`https://${HACKATHON_SLUG}.devfolio.co`}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 px-6 py-2.5 bg-[#3770FF] text-white rounded-xl hover:bg-blue-600 transition-all font-semibold font-inter shadow-lg overflow-hidden border border-[#3770FF]"
-              >
-                <div className="bg-white p-1 rounded-sm flex items-center justify-center">
-                  <img
-                    src="/devfolio-logo.png"
-                    alt="Devfolio"
-                    className="w-5 h-5 object-contain"
-                  />
-                </div>
-                <span className="text-lg">Apply with Devfolio</span>
-              </a>
+              <div 
+                className="apply-button" 
+                data-hackathon-slug={HACKATHON_SLUG} 
+                data-button-theme="dark"
+                style={{ height: '44px', width: '312px' }}
+              ></div>
             </motion.div>
 
             <MagneticButton>
