@@ -93,7 +93,7 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto">
 
             {/* Devfolio Apply Button */}
             <motion.div

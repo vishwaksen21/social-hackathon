@@ -122,13 +122,12 @@ export default function Footer() {
             href="https://devfolio.co"
             target="_blank"
             rel="noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+            className="opacity-70 hover:opacity-100 transition-opacity duration-300 w-fit inline-block"
           >
             <img
-              src="/dev.png"
+              src="/devfolio-logo.png"
               alt="Devfolio"
-              width="130"
-              height="30"
+              className="h-10 w-auto"
             />
           </a>
         </div>
