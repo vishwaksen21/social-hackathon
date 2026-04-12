@@ -79,6 +79,19 @@ export default function Home() {
             </p>
           </motion.div>
 
+          {/* Theme Preview */}
+          <motion.div variants={itemVariants} className="w-full max-w-lg">
+            <div className="card-glass p-2 sm:p-3">
+              <img
+                src="/03.png"
+                alt="Theme 03"
+                className="w-full h-auto rounded-lg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </motion.div>
+
           {/* CTA */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 w-full sm:w-auto">
 

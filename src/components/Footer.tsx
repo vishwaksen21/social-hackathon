@@ -126,7 +126,7 @@ export default function Footer() {
           >
             <img
               src="/dev.png"
-              alt="DEVFOLIO LOGO"
+              alt="Devfolio"
               width="130"
               height="30"
             />
