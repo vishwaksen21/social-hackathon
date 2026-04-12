@@ -115,22 +115,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Devfolio Sponsor Badge — required for Devfolio website verification */}
-        <div className="mt-8 md:mt-10 flex flex-col items-center gap-4">
-          <p className="text-white/30 text-[10px] font-montserrat uppercase tracking-widest">Powered by</p>
-          <a
-            href="https://devfolio.co"
-            target="_blank"
-            rel="noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity duration-300 w-fit inline-block bg-white px-4 py-2 rounded-lg"
-          >
-            <img
-              src="/devfolio-logo.png"
-              alt="Devfolio"
-              className="h-8 w-auto mix-blend-darken object-contain"
-            />
-          </a>
-        </div>
+        {/* Devfolio Sponsor Badge — FIXED */}
+<div className="mt-8 md:mt-10 flex flex-col items-center gap-4">
+  
+  <p className="text-white/50 text-[10px] font-montserrat uppercase tracking-widest">
+    Powered by
+  </p>
+
+  {/* STATIC IMAGE (important for Devfolio bot) */}
+  <img
+    src="/devfolio-logo.png"
+    alt="Devfolio"
+    className="h-10 w-auto object-contain"
+  />
+
+</div>
 
         {/* Bottom line + copyright */}
         <div className="mt-8 md:mt-10 h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />

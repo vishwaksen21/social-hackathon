@@ -37,6 +37,14 @@ export default function Home() {
       {/* HERO */}
       <section className="relative flex flex-col px-4 sm:px-6 pb-12 pt-6 md:pt-10 max-w-6xl mx-auto w-full mt-4 md:mt-0 overflow-hidden">
 
+        {/* Devfolio Verification Logo (STATIC - REQUIRED) */}
+        <div style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}>
+          <img 
+            src="https://devfolio.co/img/brand/devfolio-logo.png" 
+            alt="Devfolio"
+          />
+        </div>
+
         <motion.div
           className="flex flex-col items-start gap-6 md:gap-10"
           variants={containerVariants}
@@ -163,6 +171,24 @@ export default function Home() {
           </div>
         </motion.div>
 
+      </section>
+
+      {/* Sponsors */}
+      <section className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20 flex flex-col items-center">
+        <h2 className="font-poppins font-bold text-2xl md:text-4xl text-white mb-8 text-center uppercase tracking-widest">
+          Our Sponsors
+        </h2>
+        
+        {/* Static Devfolio Logo (VISIBLE) */}
+        <div className="flex justify-center items-center w-full max-w-md p-8 card-glass">
+          <a href="https://devfolio.co" target="_blank" rel="noreferrer" className="block w-full max-w-[200px] bg-black rounded-xl p-4 md:p-6 transition-transform hover:scale-105">
+            <img 
+              src="/devfolio-logo.png" 
+              alt="Devfolio"
+              className="w-full h-auto object-contain"
+            />
+          </a>
+        </div>
       </section>
 
       {/* Marquee */}
