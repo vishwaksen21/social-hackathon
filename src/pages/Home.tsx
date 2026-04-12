@@ -1,10 +1,11 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ExternalLink, ChevronDown } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import CountdownTimer from '../components/CountdownTimer'
 import InteractiveCard from '../components/InteractiveCard'
 import MagneticButton from '../components/MagneticButton'
-import { REGISTER_URL, STATS, THEMES } from '../utils/data'
+import { HACKATHON_SLUG, STATS, THEMES } from '../utils/data'
 
 const containerVariants = {
   hidden: {},
@@ -17,6 +18,17 @@ const itemVariants = {
 }
 
 export default function Home() {
+  // Load the Devfolio Apply SDK once per mount
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://apply.devfolio.co/v2/sdk.js'
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
   const marqueeText = `${THEMES.map((t) => t.title).join(' • ')} • `.toUpperCase()
 
   return (
@@ -68,21 +80,21 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start gap-4 sm:gap-5 w-full sm:w-auto">
 
-            <MagneticButton>
-              <motion.a
-                href={REGISTER_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Register Now
-                <ExternalLink size={16} />
-              </motion.a>
-            </MagneticButton>
+            {/* Devfolio Apply Button */}
+            <motion.div
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="flex-shrink-0"
+            >
+              <div
+                className="apply-button"
+                data-hackathon-slug={HACKATHON_SLUG}
+                data-button-theme="dark"
+                style={{ height: '44px', width: '312px' }}
+              />
+            </motion.div>
 
             <MagneticButton>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
