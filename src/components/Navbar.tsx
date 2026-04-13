@@ -10,8 +10,9 @@ import {
   Users,
   Award,
   HelpCircle,
+  ExternalLink,
 } from 'lucide-react'
-import { NAV_LINKS } from '../utils/data'
+import { NAV_LINKS, REGISTER_URL } from '../utils/data'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -84,6 +85,15 @@ export default function Navbar() {
                   </Link>
                 )
               })}
+              
+              <a
+                href={REGISTER_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="ml-2 px-4 py-2 bg-primary text-black font-montserrat font-bold text-xs uppercase tracking-widest rounded-lg hover:scale-105 shadow-[0_0_15px_rgba(255,255,0,0.2)] hover:shadow-[0_0_20px_rgba(255,255,0,0.4)] transition-all duration-300"
+              >
+                Register
+              </a>
             </nav>
           </div>
 
@@ -100,15 +110,25 @@ export default function Navbar() {
                   key={path}
                   to={path}
                   aria-label={label}
-                  className={`flex items-center justify-center h-11 w-11 rounded-2xl transition ${isActive
+                  className={`flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-2xl transition ${isActive
                       ? 'bg-white/10 border border-primary/30 text-primary'
                       : 'text-white/70 hover:text-primary'
                     }`}
                 >
-                  <Icon size={20} />
+                  <Icon size={18} className="sm:w-5 sm:h-5" />
                 </Link>
               )
             })}
+            {/* Mobile Register Button */}
+            <a
+              href={REGISTER_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Register Now"
+              className="flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-primary text-black hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,0,0.3)]"
+            >
+              <ExternalLink size={18} className="sm:w-5 sm:h-5" />
+            </a>
           </nav>
         </div>
       </div>

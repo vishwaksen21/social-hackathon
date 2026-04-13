@@ -1,11 +1,10 @@
-import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ExternalLink, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import CountdownTimer from '../components/CountdownTimer'
 import InteractiveCard from '../components/InteractiveCard'
 import MagneticButton from '../components/MagneticButton'
-import { HACKATHON_SLUG, STATS, THEMES } from '../utils/data'
+import { REGISTER_URL, STATS, THEMES } from '../utils/data'
 
 const containerVariants = {
   hidden: {},
@@ -18,17 +17,7 @@ const itemVariants = {
 }
 
 export default function Home() {
-  // Load the Devfolio Apply SDK safely
-  useEffect(() => {
-    // Only add if not already present to prevent StrictMode dupes
-    if (!document.querySelector('script[src="https://apply.devfolio.co/v2/sdk.js"]')) {
-      const script = document.createElement('script')
-      script.src = 'https://apply.devfolio.co/v2/sdk.js'
-      script.async = true
-      script.defer = true
-      document.body.appendChild(script)
-    }
-  }, [])
+
   const marqueeText = `${THEMES.map((t) => t.title).join(' • ')} • `.toUpperCase()
 
   return (
@@ -37,13 +26,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative flex flex-col px-4 sm:px-6 pb-12 pt-6 md:pt-10 max-w-6xl mx-auto w-full mt-4 md:mt-0 overflow-hidden">
 
-        {/* Devfolio Verification Logo (STATIC - REQUIRED) */}
-        <div style={{ position: "absolute", opacity: 0, pointerEvents: "none" }}>
-          <img 
-            src="https://devfolio.co/img/brand/devfolio-logo.png" 
-            alt="Devfolio"
-          />
-        </div>
+
 
         <motion.div
           className="flex flex-col items-start gap-6 md:gap-10"
@@ -88,21 +71,21 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full sm:w-auto mt-2 z-20 relative">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto mt-2 z-20 relative">
 
-            {/* Official Devfolio Apply Button */}
-            <motion.div
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              className="flex-shrink-0"
-            >
-              <div 
-                className="apply-button" 
-                data-hackathon-slug={HACKATHON_SLUG} 
-                data-button-theme="dark"
-                style={{ height: '44px', width: '312px' }}
-              ></div>
-            </motion.div>
+            <MagneticButton>
+              <motion.a
+                href={REGISTER_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Register Now
+                <ExternalLink size={16} />
+              </motion.a>
+            </MagneticButton>
 
             <MagneticButton>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -173,23 +156,7 @@ export default function Home() {
 
       </section>
 
-      {/* Sponsors */}
-      <section className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20 flex flex-col items-center">
-        <h2 className="font-poppins font-bold text-2xl md:text-4xl text-white mb-8 text-center uppercase tracking-widest">
-          Our Sponsors
-        </h2>
-        
-        {/* Static Devfolio Logo (VISIBLE) */}
-        <div className="flex justify-center items-center w-full max-w-md p-8 card-glass">
-          <a href="https://devfolio.co" target="_blank" rel="noreferrer" className="block w-full max-w-[200px] bg-black rounded-xl p-4 md:p-6 transition-transform hover:scale-105">
-            <img 
-              src="/devfolio-logo.png" 
-              alt="Devfolio"
-              className="w-full h-auto object-contain"
-            />
-          </a>
-        </div>
-      </section>
+
 
       {/* Marquee */}
       <div className="w-full overflow-hidden py-3 md:py-4 bg-primary/5 border-y border-primary/10">
