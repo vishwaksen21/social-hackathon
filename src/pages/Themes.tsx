@@ -38,7 +38,7 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
   },
   {
     id: 3,
-    title: 'Health, Well-being & AI for Impact',
+    title: 'Health & inclusivity',
     description: 'Technology and AI are revolutionizing healthcare by improving accessibility, diagnostics, and patient care. AI-driven systems can help in early disease detection and inclusive delivery.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -51,7 +51,7 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
   },
   {
     id: 4,
-    title: 'Agriculture & Food Systems',
+    title: 'Agriculture & Animal Welfare',
     description: 'Agriculture is a critical sector that can benefit from technology to improve productivity, sustainability, and resilience. Smart farming techniques can enhance crop yield and reduce wastage.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -81,7 +81,7 @@ const OVERRIDE_THEMES: ThemeOverride[] = [
   },
   {
     id: 6,
-    title: 'Financial Inclusion & Social Good',
+    title: 'Student innovation & Social Good',
     description: 'Financial inclusion ensures that everyone has access to banking, credit, and digital financial services. Technology also supports social good initiatives such as community development.',
     icon: (
       <svg className="w-8 h-8 text-[#EED244]" viewBox="0 0 24 24" fill="none" stroke="currentColor">

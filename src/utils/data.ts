@@ -97,7 +97,7 @@ export const THEMES: Theme[] = [
   {
     id: 3,
     icon: '/themes/healthcare.jpg',
-    title: 'Health, Well-being & AI for Impact',
+    title: 'Health & inclusivity',
     description: 'Technology and AI are revolutionizing healthcare by improving accessibility, diagnostics, and patient care. AI-driven systems can help in early disease detection, telemedicine, and inclusive healthcare delivery, especially in rural and underserved areas.',
     focuses: [
       'AI-based diagnostic tools',
@@ -110,7 +110,7 @@ export const THEMES: Theme[] = [
   {
     id: 4,
     icon: '/themes/agriculture.jpg',
-    title: 'Agriculture & Food Systems',
+    title: 'Agriculture & Animal Welfare',
     description: 'Agriculture is a critical sector that can benefit from technology to improve productivity, sustainability, and resilience to climate change. Smart farming techniques and data-driven insights can enhance crop yield and reduce resource wastage.',
     focuses: [
       'Crop monitoring solutions',
@@ -136,7 +136,7 @@ export const THEMES: Theme[] = [
   {
     id: 6,
     icon: '/themes/fin.png',
-    title: 'Financial Inclusion & Social Good',
+    title: 'Student innovation & Social Good',
     description: 'Financial inclusion ensures that everyone has access to banking, credit, and digital financial services. At the same time, technology can also support social good initiatives such as animal welfare, ethical systems, and community development.',
     focuses: [
       'Digital payments & microfinance platforms',
