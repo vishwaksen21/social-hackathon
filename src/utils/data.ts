@@ -13,8 +13,7 @@ export const NAV_LINKS = [
   { label: 'Team', path: '/team' },
   { label: 'Results', path: '/results' },
   { label: 'Gallery', path: '/gallery' },
-  { label: 'FAQs', path: '/faqs' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'FAQs & Contact', path: '/contact' },
 ]
 
 export const SOCIAL_LINKS = {

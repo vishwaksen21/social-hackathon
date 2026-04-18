@@ -1,11 +1,15 @@
-import { motion } from 'framer-motion'
-import { SOCIAL_LINKS, REGISTER_URL } from '../utils/data'
-import { Phone, Mail, Instagram, Linkedin, ExternalLink } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { SOCIAL_LINKS, REGISTER_URL, FAQS } from '../utils/data'
+import { Phone, Mail, Instagram, Linkedin, ExternalLink, Plus, Minus } from 'lucide-react'
 import MagneticButton from '../components/MagneticButton'
+import InteractiveCard from '../components/InteractiveCard'
 
 export default function Contact() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
   return (
-    <div className="min-h-screen bg-[#090909] relative overflow-hidden font-inter text-white flex flex-col items-center justify-center pt-28 pb-24 px-6 w-full">
+    <div className="min-h-screen bg-[#090909] relative overflow-hidden font-inter text-white flex flex-col items-center justify-center pt-20 md:pt-28 pb-24 px-6 w-full">
 
       {/* Subtle geometric repeating wireframe pattern of interconnected diamonds */}
       <div
@@ -22,7 +26,7 @@ export default function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
           <h1 className="font-poppins font-black text-4xl sm:text-5xl md:text-[5rem] mb-4 md:mb-6 tracking-tight leading-tight">
             <span className="text-white">Contact</span><span className="text-primary"> Us</span>
@@ -45,28 +49,24 @@ export default function Contact() {
               title: "Phone",
               value: SOCIAL_LINKS.phone,
               href: `tel:${SOCIAL_LINKS.phone.replace(/\s+/g, '')}`,
-
               icon: Phone
             },
             {
               title: "Email",
               value: SOCIAL_LINKS.email.replace('mailto:', ''),
               href: SOCIAL_LINKS.email,
-
               icon: Mail
             },
             {
               title: "Instagram",
               value: "@socialhackathon_cmrit",
               href: SOCIAL_LINKS.instagram,
-
               icon: Instagram
             },
             {
               title: "LinkedIn",
               value: "Innovation Club",
               href: SOCIAL_LINKS.linkedin,
-
               icon: Linkedin
             }
           ].map((item, i) => (
@@ -93,8 +93,93 @@ export default function Contact() {
 
         </motion.div>
 
+        {/* Divider */}
+        <div className="w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-16 md:my-28" />
+
+        {/* FAQs Section */}
+        <motion.div
+           initial={{ opacity: 0, y: 40 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           className="text-center mb-10 md:mb-16 w-full"
+        >
+          <h2 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-5xl mb-3 md:mb-4 leading-tight">
+            Common{' '}
+            <span className="text-primary drop-shadow-[0_0_15px_rgba(255,255,0,0.4)]">
+              Questions
+            </span>
+          </h2>
+          <p className="text-white/60 font-inter max-w-md md:max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed px-2">
+            Everything you need to know about The Social Hackathon 2026.
+          </p>
+        </motion.div>
+
+        <div className="w-full max-w-3xl space-y-3 md:space-y-4">
+          {FAQS.map((faq, i) => {
+            const isOpen = openIndex === i
+
+            return (
+              <InteractiveCard
+                key={i}
+                className={`overflow-hidden rounded-xl md:rounded-2xl border bg-white/[0.02] backdrop-blur-xl transition-all duration-300 ${
+                  isOpen
+                    ? 'border-primary/40 shadow-[0_0_25px_rgba(255,255,0,0.15)]'
+                    : 'border-white/10'
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+              >
+                {/* Question */}
+                <button
+                  className="w-full flex items-center justify-between p-4 md:p-6 text-left group active:scale-[0.99] transition"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                >
+                  <h3
+                    className={`font-inter font-semibold text-sm md:text-base pr-4 leading-snug ${
+                      isOpen
+                        ? 'text-primary'
+                        : 'text-white group-hover:text-primary/80'
+                    }`}
+                  >
+                    {faq.q}
+                  </h3>
+
+                  {/* Icon */}
+                  <div
+                    className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border transition ${
+                      isOpen
+                        ? 'bg-primary/10 border-primary text-primary'
+                        : 'border-white/20 text-white/50'
+                    }`}
+                  >
+                    {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                  </div>
+                </button>
+
+                {/* Answer */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25, ease: 'easeInOut' }}
+                    >
+                      <div className="px-4 md:px-6 pb-5 md:pb-6 text-white/70 font-inter text-xs sm:text-sm md:text-base leading-relaxed border-t border-white/5">
+                        <div className="pt-3 md:pt-4">{faq.a}</div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </InteractiveCard>
+            )
+          })}
+        </div>
+
         {/* CTA */}
-        <div className="mt-16 sm:mt-20 flex flex-col items-center text-center">
+        <div className="mt-16 md:mt-24 flex flex-col items-center text-center w-full">
           <p className="text-[#a1a1aa] mb-5 text-[15px] sm:text-[17px]">
             Ready to build something impactful?
           </p>
