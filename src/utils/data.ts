@@ -12,6 +12,7 @@ export const NAV_LINKS = [
   { label: 'Prizes', path: '/prizes' },
   { label: 'Team', path: '/team' },
   { label: 'Results', path: '/results' },
+  { label: 'Gallery', path: '/gallery' },
   { label: 'FAQs', path: '/faqs' },
   { label: 'Contact', path: '/contact' },
 ]

@@ -13,6 +13,7 @@ const Team = lazy(() => import('./pages/Team'))
 const Results = lazy(() => import('./pages/Results'))
 const FAQs = lazy(() => import('./pages/FAQs'))
 const Contact = lazy(() => import('./pages/Contact'))
+const Gallery = lazy(() => import('./pages/Gallery'))
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -40,6 +41,7 @@ function AnimatedRoutes() {
           <Route path="/results" element={<Results />} />
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
