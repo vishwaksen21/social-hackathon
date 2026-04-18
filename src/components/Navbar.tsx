@@ -100,23 +100,18 @@ export default function Navbar() {
             </nav>
           </div>
 
-          {/* ---------- Mobile Navbar (Logo + Scrollable Nav) ---------- */}
-          <div className="md:hidden flex flex-col">
+          {/* ---------- Mobile Navbar (Single Row) ---------- */}
+          <nav className="md:hidden flex items-center gap-2 px-3 h-[64px] overflow-hidden">
 
             {/* Logo */}
-            <div className="flex items-center justify-center h-[60px]">
-              <Link to="/" className="flex items-center gap-1 font-poppins font-black">
-                <span className="text-primary text-2xl">&lt;</span>
-                <span className="text-white text-xl">/</span>
-                <span className="text-primary text-2xl">&gt;</span>
-              </Link>
-            </div>
+            <Link to="/" className="flex items-center gap-1 font-poppins font-black shrink-0">
+              <span className="text-primary text-xl">&lt;</span>
+              <span className="text-white text-lg">/</span>
+              <span className="text-primary text-xl">&gt;</span>
+            </Link>
 
             {/* Scrollable Nav */}
-            <nav
-              aria-label="Primary"
-              className="flex items-center gap-3 px-3 pb-3 overflow-x-auto no-scrollbar"
-            >
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar ml-2">
               {mobileLinks.map(({ label, path, Icon }) => {
                 const isActive = location.pathname === path
 
@@ -124,13 +119,13 @@ export default function Navbar() {
                   <Link
                     key={path}
                     to={path}
-                    className={`flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl transition ${isActive
+                    className={`flex flex-col items-center justify-center shrink-0 w-[52px] h-[52px] rounded-xl transition ${isActive
                         ? 'bg-white/10 border border-primary/30 text-primary'
                         : 'text-white/70'
                       }`}
                   >
-                    <Icon size={20} />
-                    <span className="text-[10px] mt-1">{label}</span>
+                    <Icon size={18} />
+                    <span className="text-[9px] mt-0.5">{label}</span>
                   </Link>
                 )
               })}
@@ -140,13 +135,13 @@ export default function Navbar() {
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl bg-primary text-black font-semibold"
+                className="flex flex-col items-center justify-center shrink-0 w-[52px] h-[52px] rounded-xl bg-primary text-black"
               >
-                <ExternalLink size={20} />
-                <span className="text-[10px] mt-1">Register</span>
+                <ExternalLink size={18} />
+                <span className="text-[9px] mt-0.5">Go</span>
               </a>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
       </div>
     </motion.header>
