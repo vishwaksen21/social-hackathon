@@ -55,7 +55,7 @@ export default function Navbar() {
               : 'bg-black/40'
             }`}
         >
-          {/* Desktop: logo + text links */}
+          {/* ---------- Desktop Navbar ---------- */}
           <div className="hidden md:flex items-center justify-between px-5 lg:px-6 h-[72px]">
             <Link to="/" className="flex items-center gap-1 font-poppins font-black">
               <span className="text-primary text-3xl md:text-4xl">&lt;</span>
@@ -87,22 +87,22 @@ export default function Navbar() {
                   </Link>
                 )
               })}
-              
+
               <a
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="ml-2 px-4 py-2 bg-primary text-black font-montserrat font-bold text-xs uppercase tracking-widest rounded-lg hover:scale-105 shadow-[0_0_15px_rgba(255,255,0,0.2)] hover:shadow-[0_0_20px_rgba(255,255,0,0.4)] transition-all duration-300"
+                className="ml-2 px-4 py-2 bg-primary text-black font-montserrat font-bold text-xs uppercase tracking-widest rounded-lg hover:scale-105 transition-all duration-300"
               >
                 Register
               </a>
             </nav>
           </div>
 
-          {/* Mobile: icon-only nav (pill) */}
+          {/* ---------- Mobile Navbar (SCROLLABLE) ---------- */}
           <nav
             aria-label="Primary"
-            className="flex md:hidden items-center justify-between gap-1 px-3 h-[64px] w-full max-w-[400px] mx-auto"
+            className="flex md:hidden items-center gap-3 px-3 h-[70px] overflow-x-auto no-scrollbar"
           >
             {mobileLinks.map(({ label, path, Icon }) => {
               const isActive = location.pathname === path
@@ -111,25 +111,26 @@ export default function Navbar() {
                 <Link
                   key={path}
                   to={path}
-                  aria-label={label}
-                  className={`flex items-center justify-center shrink-0 w-[34px] h-[34px] sm:h-10 sm:w-10 rounded-xl sm:rounded-2xl transition ${isActive
+                  className={`flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl transition ${isActive
                       ? 'bg-white/10 border border-primary/30 text-primary'
-                      : 'text-white/70 hover:text-primary'
+                      : 'text-white/70'
                     }`}
                 >
-                  <Icon size={16} className="sm:w-5 sm:h-5" />
+                  <Icon size={20} />
+                  <span className="text-[10px] mt-1">{label}</span>
                 </Link>
               )
             })}
-            {/* Mobile Register Button */}
+
+            {/* Register Button */}
             <a
               href={REGISTER_URL}
               target="_blank"
               rel="noreferrer"
-              aria-label="Register Now"
-              className="flex items-center justify-center shrink-0 w-[34px] h-[34px] sm:h-10 sm:w-10 rounded-xl sm:rounded-2xl bg-primary text-black hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,0,0.3)]"
+              className="flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl bg-primary text-black font-semibold"
             >
-              <ExternalLink size={16} className="sm:w-5 sm:h-5" />
+              <ExternalLink size={20} />
+              <span className="text-[10px] mt-1">Register</span>
             </a>
           </nav>
         </div>
