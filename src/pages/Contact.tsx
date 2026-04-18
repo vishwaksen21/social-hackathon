@@ -9,7 +9,7 @@ export default function Contact() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="min-h-screen bg-[#090909] relative overflow-hidden font-inter text-white flex flex-col items-center justify-center pt-20 md:pt-28 pb-24 px-6 w-full">
+    <div className="min-h-screen bg-[#090909] relative overflow-hidden font-inter text-white flex flex-col items-center pt-24 md:pt-32 pb-24 px-4 sm:px-6 w-full">
 
       {/* Subtle geometric repeating wireframe pattern of interconnected diamonds */}
       <div

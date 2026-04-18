@@ -11,6 +11,7 @@ import {
   Award,
   HelpCircle,
   ExternalLink,
+  Camera,
 } from 'lucide-react'
 import { NAV_LINKS, REGISTER_URL } from '../utils/data'
 
@@ -27,7 +28,8 @@ export default function Navbar() {
       { label: 'Prizes', path: '/prizes', Icon: Trophy },
       { label: 'Team', path: '/team', Icon: Users },
       { label: 'Results', path: '/results', Icon: Award },
-      { label: 'FAQs', path: '/faqs', Icon: HelpCircle },
+      { label: 'Gallery', path: '/gallery', Icon: Camera },
+      { label: 'Contact', path: '/contact', Icon: HelpCircle },
     ],
     []
   )
@@ -100,7 +102,7 @@ export default function Navbar() {
           {/* Mobile: icon-only nav (pill) */}
           <nav
             aria-label="Primary"
-            className="flex md:hidden items-center justify-between gap-1 px-2 h-[64px]"
+            className="flex md:hidden items-center justify-between gap-1 px-3 h-[64px] w-full max-w-[400px] mx-auto"
           >
             {mobileLinks.map(({ label, path, Icon }) => {
               const isActive = location.pathname === path
@@ -110,12 +112,12 @@ export default function Navbar() {
                   key={path}
                   to={path}
                   aria-label={label}
-                  className={`flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-2xl transition ${isActive
+                  className={`flex items-center justify-center shrink-0 w-[34px] h-[34px] sm:h-10 sm:w-10 rounded-xl sm:rounded-2xl transition ${isActive
                       ? 'bg-white/10 border border-primary/30 text-primary'
                       : 'text-white/70 hover:text-primary'
                     }`}
                 >
-                  <Icon size={18} className="sm:w-5 sm:h-5" />
+                  <Icon size={16} className="sm:w-5 sm:h-5" />
                 </Link>
               )
             })}
@@ -125,9 +127,9 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Register Now"
-              className="flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-primary text-black hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,0,0.3)]"
+              className="flex items-center justify-center shrink-0 w-[34px] h-[34px] sm:h-10 sm:w-10 rounded-xl sm:rounded-2xl bg-primary text-black hover:scale-105 transition shadow-[0_0_15px_rgba(255,255,0,0.3)]"
             >
-              <ExternalLink size={18} className="sm:w-5 sm:h-5" />
+              <ExternalLink size={16} className="sm:w-5 sm:h-5" />
             </a>
           </nav>
         </div>
