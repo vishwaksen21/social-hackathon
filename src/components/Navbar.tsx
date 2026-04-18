@@ -50,11 +50,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 pt-3 md:pt-4">
         <div
-          className={`w-full rounded-full border border-white/10 backdrop-blur-xl transition-all duration-500 ${scrolled
+          className={`w-full rounded-[20px] border border-white/10 backdrop-blur-xl transition-all duration-500 ${scrolled
               ? 'bg-black/70 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
               : 'bg-black/40'
             }`}
         >
+
           {/* ---------- Desktop Navbar ---------- */}
           <div className="hidden md:flex items-center justify-between px-5 lg:px-6 h-[72px]">
             <Link to="/" className="flex items-center gap-1 font-poppins font-black">
@@ -99,40 +100,53 @@ export default function Navbar() {
             </nav>
           </div>
 
-          {/* ---------- Mobile Navbar (SCROLLABLE) ---------- */}
-          <nav
-            aria-label="Primary"
-            className="flex md:hidden items-center gap-3 px-3 h-[70px] overflow-x-auto no-scrollbar"
-          >
-            {mobileLinks.map(({ label, path, Icon }) => {
-              const isActive = location.pathname === path
+          {/* ---------- Mobile Navbar (Logo + Scrollable Nav) ---------- */}
+          <div className="md:hidden flex flex-col">
 
-              return (
-                <Link
-                  key={path}
-                  to={path}
-                  className={`flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl transition ${isActive
-                      ? 'bg-white/10 border border-primary/30 text-primary'
-                      : 'text-white/70'
-                    }`}
-                >
-                  <Icon size={20} />
-                  <span className="text-[10px] mt-1">{label}</span>
-                </Link>
-              )
-            })}
+            {/* Logo */}
+            <div className="flex items-center justify-center h-[60px]">
+              <Link to="/" className="flex items-center gap-1 font-poppins font-black">
+                <span className="text-primary text-2xl">&lt;</span>
+                <span className="text-white text-xl">/</span>
+                <span className="text-primary text-2xl">&gt;</span>
+              </Link>
+            </div>
 
-            {/* Register Button */}
-            <a
-              href={REGISTER_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl bg-primary text-black font-semibold"
+            {/* Scrollable Nav */}
+            <nav
+              aria-label="Primary"
+              className="flex items-center gap-3 px-3 pb-3 overflow-x-auto no-scrollbar"
             >
-              <ExternalLink size={20} />
-              <span className="text-[10px] mt-1">Register</span>
-            </a>
-          </nav>
+              {mobileLinks.map(({ label, path, Icon }) => {
+                const isActive = location.pathname === path
+
+                return (
+                  <Link
+                    key={path}
+                    to={path}
+                    className={`flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl transition ${isActive
+                        ? 'bg-white/10 border border-primary/30 text-primary'
+                        : 'text-white/70'
+                      }`}
+                  >
+                    <Icon size={20} />
+                    <span className="text-[10px] mt-1">{label}</span>
+                  </Link>
+                )
+              })}
+
+              {/* Register */}
+              <a
+                href={REGISTER_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-col items-center justify-center shrink-0 min-w-[64px] h-[56px] rounded-2xl bg-primary text-black font-semibold"
+              >
+                <ExternalLink size={20} />
+                <span className="text-[10px] mt-1">Register</span>
+              </a>
+            </nav>
+          </div>
         </div>
       </div>
     </motion.header>
