@@ -53,7 +53,7 @@ export const TESTIMONIALS = [
 // ─── Key dates timeline (About page) ─────────────────────────────────────────
 export const KEY_DATES = [
   { date: 'April 9, 2026', event: 'Registration Opens' },
-  { date: 'April 23, 2026', event: 'Registration & Round 1 Closes' },
+  { date: 'April 26, 2026', event: 'Registration & Round 1 Closes' },
   { date: 'May 5, 2026', event: 'Round 1 Results Announced' },
   { date: 'May 13–14, 2026', event: 'Final Round – In-Campus Hackathon' },
 ]
@@ -150,8 +150,8 @@ export const THEMES: Theme[] = [
 
 // ─── Event Timeline ───────────────────────────────────────────────────────────
 export const EVENT_TIMELINE = [
-  { step: 1, event: 'Registration', date: '9th April – 23rd April 2026', side: 'left' },
-  { step: 2, event: 'Round 1: Submission of Idea', date: '9th April – 23rd April 2026', side: 'right' },
+  { step: 1, event: 'Registration', date: '9th April – 26th April 2026', side: 'left' },
+  { step: 2, event: 'Round 1: Submission of Idea', date: '9th April – 26th April 2026', side: 'right' },
   { step: 3, event: 'Results of Round 1', date: '5th May 2026', side: 'left' },
   { step: 4, event: 'Round 2 / Final Round', date: '13th – 14th May 2026 (Offline, In-Campus)', side: 'right' },
 ]
