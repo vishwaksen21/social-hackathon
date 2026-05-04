@@ -91,7 +91,7 @@
 | Tech Hawks | Chennai Institute of Technology | Nithin S |
 | Ignited Minds | Vidyavardhaka College of Engineering | Kalaiyarasu R |
 | Toggle | Anna University (AU), Chennai | Dhanalakshmi D |
-| TEAM COGNYX | None | Anu Priya D |
+| TEAM COGNYX | Sri Eshwar College of Engineering (SECE), Tamil Nadu | Anu Priya D |
 | MediSync AR | Maharaja Institute of Technology Tandavpura | None |
 | ECO MINDS | Bannari Amman Institute of Technology | Akshat Raj |
 | INVICTUS | CMR Institute of Technology | Jeevesh Sankar M |

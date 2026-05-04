@@ -256,7 +256,7 @@ export const SHORTLISTED_HARDWARE = [
   { team: 'Tech Hawks', leader: 'Nithin S', college: 'Chennai Institute of Technology' },
   { team: 'Ignited Minds', leader: 'Kalaiyarasu R', college: 'Vidyavardhaka College of Engineering' },
   { team: 'Toggle', leader: 'Dhanalakshmi D', college: 'Anna University (AU), Chennai' },
-  { team: 'TEAM COGNYX', leader: 'Anu Priya D', college: 'None' },
+  { team: 'TEAM COGNYX', leader: 'Anu Priya D', college: 'Sri Eshwar College of Engineering (SECE), Tamil Nadu' },
   { team: 'MediSync AR', leader: 'None', college: 'Maharaja Institute of Technology Tandavpura' },
   { team: 'ECO MINDS', leader: 'Akshat Raj', college: 'Bannari Amman Institute of Technology' },
   { team: 'INVICTUS', leader: 'Jeevesh Sankar M', college: 'CMR Institute of Technology' },
