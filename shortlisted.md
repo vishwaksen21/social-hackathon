@@ -87,15 +87,15 @@
 | Gestro Motion | PM Shri KV Khurda Road | Abhigyan Paramanik |
 | R.O.V.E.R — Recon & Observation Vehicle for Emergency Response | CMRIT | Likitha N |
 | TEAM VELOCITY-X | Rajalakshmi Institute of Technology | Sneka Venkateswari M |
-| DGTHON | None | M. Raghul |
-| Tech Hawks | None | Nithin S |
+| DGTHON | PSNA College of Engineering and Technology (PSNACET),Dindigul | M. Raghul |
+| Tech Hawks | Chennai Institute of Technology | Nithin S |
 | Ignited Minds | Vidyavardhaka College of Engineering | Kalaiyarasu R |
 | Toggle | Anna University (AU), Chennai | Dhanalakshmi D |
 | TEAM COGNYX | None | Anu Priya D |
 | MediSync AR | Maharaja Institute of Technology Tandavpura | None |
 | ECO MINDS | Bannari Amman Institute of Technology | Akshat Raj |
 | INVICTUS | CMR Institute of Technology | Jeevesh Sankar M |
-| Mavericks | None | Richie Joen A |
+| Mavericks | PSNA College of Engineering and Technology (PSNACET),Dindigul | Richie Joen A |
 | Technovative | Cambridge Institute of Technology | Piyush Kumar Singh |
 
 
