@@ -431,7 +431,6 @@ export const WAITLIST_SOFTWARE = [
 ]
 
 export const WAITLIST_HARDWARE = [
-  { team: 'Westria', leader: 'Mahathi BJ', college: 'SNS College of Technology' },
   { team: 'NetCoders', leader: 'Ayush', college: 'Vellore Institute of Technology, Bhopal' },
   { team: 'Toggle', leader: 'Dhanalakshmi D', college: 'SNS College of Technology' },
   { team: 'IronEpoch', leader: 'Amrita Raj', college: 'Amrita Vishwa Vidyapeetham, Amritapuri Campus' },
