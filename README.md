@@ -37,3 +37,5 @@ The event features an action-packed 24 hours including:
 ---
 
 *Organized with ❤️ by the Innovation Club.*
+
+cmrit welcoems you to social hacakthon 2026, organised by cmrit and innovation club, it will be in cmrit
