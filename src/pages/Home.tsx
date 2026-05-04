@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, ChevronDown } from 'lucide-react'
+import { ExternalLink, ChevronDown, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import CountdownTimer from '../components/CountdownTimer'
 import InteractiveCard from '../components/InteractiveCard'
@@ -71,15 +71,27 @@ export default function Home() {
           </motion.div>
 
           {/* CTA */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto mt-2 z-20 relative">
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-5 w-full sm:w-auto mt-2 z-20 relative">
+
+            <MagneticButton>
+              <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  to="/results"
+                  className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
+                >
+                  Round 1 Shortlist
+                  <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+            </MagneticButton>
 
             <MagneticButton>
               <motion.a
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-primary text-black font-montserrat font-bold text-xs sm:text-sm uppercase tracking-widest rounded-xl shadow-[0_0_20px_rgba(255,255,0,0.3)]"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 bg-white/5 backdrop-blur-md text-white font-montserrat font-semibold text-xs sm:text-sm uppercase tracking-widest rounded-xl border border-white/10 hover:bg-white/10 transition-all shadow-lg"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Register Now

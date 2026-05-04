@@ -97,3 +97,36 @@
 | INVICTUS | CMR Institute of Technology | Jeevesh Sankar M |
 | Mavericks | None | Richie Joen A |
 | Technovative | Cambridge Institute of Technology | Piyush Kumar Singh |
+
+
+## software 🕒 Waiting List
+
+| Team Name           | Leader                 | Institution                                            |
+|--------------------|------------------------|--------------------------------------------------------|
+| CodeX              | Rahul Reddy           | Siddaganga Institute of Technology                    |
+| Code Krafters      | Muhammad Danish J     | Gopalan College of Engineering and Management         |
+| Neural Setu        | R DARSHAN             | JSSATEB                                               |
+| BOTS INFO          | Nagaraj R S           | REVA University                                       |
+| Team SilentShield  | Bhabina Babu          | Gopalan College of Engineering and Management         |
+| Phoenix            | Niharika G            | Dayananda Sagar Academy of Technology and Management  |
+| Kishan Tech        | Varsha Pattanshetti   | Nagarjuna College of Engineering and Technology       |
+| Sizzling Brownies  | Khadijatul Kubra      | Sampoorna Institute of Technology and Research        |
+| Fusion 2           | Kashfa Saba           | Nagarjuna College of Engineering and Technology       |
+| Team Cranddr       | Dhruva Kumar K        | Dr SMCE                                               |
+| CodeX              | Rahul Reddy           | Siddaganga Institute of Technology                    |
+| Team Bread and Jam | Rohit Mohan           | MVJ College of Engineering                            |
+| CODE_SORCERERS     | P. Venkata Sai Rohith | Sir M Visvesvaraya Institute of Technology            |
+| Dream Decoders     | Abu Talha Ansari      | New Horizon College of Engineering                    |
+| ALPHA SEEKERS      | B Abhinav Varma       | RNS Institute of Technology                           |
+
+## hardware 🕒 Waiting List
+
+| Team Name      | Leader              | Institution                                                     |
+|----------------|---------------------|------------------------------------------------------------------|
+| Westria        | Mahathi BJ          | SNS College of Technology                                       |
+| NetCoders      | Ayush               | Vellore Institute of Technology, Bhopal                         |
+| Toggle         | Dhanalakshmi D      | SNS College of Technology                                       |
+| IronEpoch      | Amrita Raj          | Amrita Vishwa Vidyapeetham, Amritapuri Campus                   |
+| HUG FOR BUG    | Harshitha K         | Ballari Institute of Technology and Management                  |
+| BYTE BUSTERS   | Prithvik Raju Naik  | Dr. Mahalingam College of Engineering and Technology            |
+| Tech Blasters  | Chiranthan M        | PSNA College of Engineering and Technology                      |
