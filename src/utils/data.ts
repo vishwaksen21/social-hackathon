@@ -244,7 +244,7 @@ export const SHORTLISTED_HARDWARE = [
   { team: 'BIO-VOLT', leader: 'Hardhik Bhatia', college: 'Sir M. Visvesvaraya Institute of Technology (SMVIT), Bengaluru' },
   { team: 'VERDE - Vehicle for Environmental Recon, Detection & Exploration', leader: 'Likitha N', college: 'CMR Institute of Technology' },
   { team: 'Vishwakarma', leader: 'Vedant Prakash Chilbule', college: 'SNS College of Technology' },
-  { team: 'MedHide', leader: 'Geethanjali V N', college: 'MVJ College of Engineering' },
+  { team: 'MedHide', leader: 'Geethanjali V N', college: 'Velammal Engineering college' },
   { team: 'FIRE', leader: 'Sivakumar Balaji', college: 'PSNA College of Engineering and Technology' },
   { team: 'VARS', leader: 'Mohamed Aqeeb', college: 'CMR Institute of Technology' },
   { team: 'NotYetDecided', leader: 'Kuldeep Chouhan R', college: 'Siddaganga Institute of Technology' },
