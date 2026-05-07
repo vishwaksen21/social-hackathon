@@ -256,7 +256,7 @@ export const SHORTLISTED_HARDWARE = [
   { team: 'RootRhythm', leader: 'Sathvik A S', college: 'CMR Institute of Technology' },
   { team: 'Gestro Motion', leader: 'Abhigyan Paramanik', college: 'PM Shri KV Khurda Road' },
   { team: 'Westria', leader: 'Mahathi BJ', college: 'SNS College of Technology' },
-  { team: 'TEAM VELOCITY-X', leader: 'Sneka Venkateswari M', college: 'Rajalakshmi Institute of Technology' },
+  { team: 'TEAM VELOCITY-X', leader: 'Sneka Venkateswari M', college: 'Dr Mahalingam college of Engineering and Technology' },
   { team: 'DGTHON', leader: 'M. Raghul', college: 'PSNA College of Engineering and Technology (PSNACET),Dindigul' },
   { team: 'Tech Hawks', leader: 'Nithin S', college: 'Chennai Institute of Technology' },
   { team: 'Ignited Minds', leader: 'Kalaiyarasu R', college: 'Vidyavardhaka College of Engineering' },
