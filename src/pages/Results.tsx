@@ -1,11 +1,13 @@
 import { Clock } from 'lucide-react'
 import InteractiveCard from '../components/InteractiveCard'
-import { SHORTLISTED_SOFTWARE, SHORTLISTED_HARDWARE, WAITLIST_SOFTWARE, WAITLIST_HARDWARE } from '../utils/data'
+import { SHORTLISTED_SOFTWARE, SHORTLISTED_HARDWARE } from '../utils/data'
 
 type Team = {
   team: string
-  leader: string
+  track?: string
+  leader?: string
   college: string
+  location?: string
 }
 
 export default function Results() {
@@ -19,21 +21,15 @@ export default function Results() {
         </h1>
 
         <p className="text-white/60 max-w-xl mx-auto text-sm md:text-base">
-          Congratulations to the teams moving forward. Waiting list teams will be updated if slots open up.
+          Congratulations to the teams moving forward.
         </p>
       </div>
 
       {/* Software */}
       <ResultsCard title="Software Track - Shortlisted" data={SHORTLISTED_SOFTWARE} />
-      {WAITLIST_SOFTWARE.length > 0 && (
-        <ResultsCard title="Software Track - Waiting List" data={WAITLIST_SOFTWARE} isWaitlist />
-      )}
 
       {/* Hardware */}
       <ResultsCard title="Hardware Track - Shortlisted" data={SHORTLISTED_HARDWARE} />
-      {WAITLIST_HARDWARE.length > 0 && (
-        <ResultsCard title="Hardware Track - Waiting List" data={WAITLIST_HARDWARE} isWaitlist />
-      )}
 
     </div>
   )
@@ -45,24 +41,22 @@ export default function Results() {
 function ResultsCard({
   title,
   data,
-  isWaitlist = false,
 }: {
   title: string
   data: Team[]
-  isWaitlist?: boolean
 }) {
   return (
     <div className="mb-10">
 
-      <InteractiveCard className={`card-glass p-4 sm:p-6 md:p-8 rounded-2xl border bg-white/[0.03] ${isWaitlist ? 'border-orange-500/20' : 'border-white/10'}`}>
+      <InteractiveCard className={`card-glass p-4 sm:p-6 md:p-8 rounded-2xl border bg-white/[0.03] border-white/10`}>
 
         {/* Header */}
         <div className="flex items-center gap-3 mb-5">
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isWaitlist ? 'bg-orange-500/10 border border-orange-500/30 text-orange-500' : 'bg-primary/10 border border-primary/30 text-primary'}`}>
+          <div className={`w-10 h-10 rounded-full flex items-center justify-center bg-primary/10 border border-primary/30 text-primary`}>
             <Clock size={18} />
           </div>
 
-          <h2 className={`font-poppins font-bold text-xl md:text-2xl ${isWaitlist ? 'text-orange-400' : 'text-primary'}`}>
+          <h2 className={`font-poppins font-bold text-xl md:text-2xl text-primary`}>
             {title}
           </h2>
         </div>
@@ -73,11 +67,12 @@ function ResultsCard({
           <table className="w-full min-w-[700px] text-sm text-left text-white/80">
 
             {/* Sticky Header */}
-            <thead className={`text-xs uppercase bg-white/5 sticky top-0 z-10 ${isWaitlist ? 'text-orange-400' : 'text-primary'}`}>
+            <thead className={`text-xs uppercase bg-white/5 sticky top-0 z-10 text-primary`}>
               <tr>
                 <th className="px-5 py-3">Team Name</th>
-                <th className="px-5 py-3">Leader</th>
+                <th className="px-5 py-3">Track</th>
                 <th className="px-5 py-3">Institution</th>
+                <th className="px-5 py-3">Location</th>
               </tr>
             </thead>
 
@@ -92,16 +87,19 @@ function ResultsCard({
                       {team.team}
                     </td>
                     <td className="px-5 py-3">
-                      {team.leader}
+                      {team.track || '-'}
                     </td>
                     <td className="px-5 py-3">
                       {team.college}
+                    </td>
+                    <td className="px-5 py-3">
+                      {team.location || '-'}
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan={3} className="text-center py-6 text-white/40">
+                  <td colSpan={4} className="text-center py-6 text-white/40">
                     No data available
                   </td>
                 </tr>
