@@ -241,6 +241,7 @@ export const SHORTLISTED_SOFTWARE = [
 export const SHORTLISTED_HARDWARE = [
   { team: 'Wrong Brothers', track: 'Hardware', college: 'MVJ College of Engineering', location: 'Bangalore, Karnataka' },
   { team: 'VARS', track: 'Hardware', college: 'CMR Institute of Technology', location: 'Bengaluru,Karnataka' },
+  { team: 'VERDE', track: 'Hardware', college: 'CMR Institute of Technology', location: 'Bengaluru,Karnataka' },
   { team: 'MedHide', track: 'Hardware', college: 'Velammal Engineering College', location: 'Chennai, Tamil Nadu' },
   { team: 'Dgthon', track: 'Hardware', college: 'PSNA College of Engineering and Technology', location: 'Dindigul, Tamil Nadu' },
   { team: 'Novocaine', track: 'Hardware', college: 'Cmr institute of technology', location: 'Bengaluru, Karnataka' },
