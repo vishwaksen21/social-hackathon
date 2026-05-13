@@ -12,6 +12,7 @@ import {
   HelpCircle,
   ExternalLink,
   Camera,
+  ShieldCheck,
 } from 'lucide-react'
 import { NAV_LINKS, REGISTER_URL } from '../utils/data'
 
@@ -28,6 +29,7 @@ export default function Navbar() {
       { label: 'Prizes', path: '/prizes', Icon: Trophy },
       { label: 'Team', path: '/team', Icon: Users },
       { label: 'Results', path: '/results', Icon: Award },
+      { label: 'Verify', path: '/verify', Icon: ShieldCheck },
       { label: 'Gallery', path: '/gallery', Icon: Camera },
       { label: 'Contact', path: '/contact', Icon: HelpCircle },
     ],
