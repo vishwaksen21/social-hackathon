@@ -8,10 +8,6 @@ import {
   Award, 
   ShieldCheck, 
   QrCode, 
-  HelpCircle, 
-  FileText, 
-  PlusCircle, 
-  UploadCloud,
   User,
   GraduationCap,
   Calendar,
@@ -28,7 +24,6 @@ export default function Verify() {
   
   const [inputVal, setInputVal] = useState(idQuery)
   const [searchedId, setSearchedId] = useState(idQuery)
-  const [showGuide, setShowGuide] = useState(false)
   const [showStudio, setShowStudio] = useState(false)
   const [studioSearch, setStudioSearch] = useState('')
 
@@ -578,121 +573,7 @@ export default function Verify() {
         </AnimatePresence>
       </div>
 
-      {/* Beginner Friendly Organizers / Admin Guidance Section */}
-      <div className="mt-16 pt-8 border-t border-white/10">
-        <div className="max-w-3xl mx-auto">
-          <button
-            type="button"
-            onClick={() => setShowGuide(!showGuide)}
-            className="w-full flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition duration-200 text-left"
-          >
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                <HelpCircle size={20} />
-              </div>
-              <div>
-                <h3 className="text-sm sm:text-base font-semibold text-white">Organizers & Admin Handbook</h3>
-                <p className="text-xs text-white/50">Learn how to manage data, add participants, generate QR codes, and deploy</p>
-              </div>
-            </div>
-            <span className="text-xs text-primary font-mono bg-primary/10 px-2 py-1 rounded">
-              {showGuide ? 'Hide Guide' : 'Show Guide'}
-            </span>
-          </button>
 
-          <AnimatePresence>
-            {showGuide && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden mt-3"
-              >
-                <div className="p-5 sm:p-6 rounded-xl bg-black/60 border border-white/10 space-y-6 text-xs sm:text-sm text-white/80">
-                  
-                  {/* Where to place data */}
-                  <div className="space-y-2">
-                    <h4 className="text-primary font-semibold flex items-center gap-2">
-                      <FileText size={16} />
-                      1. Where to place participant data
-                    </h4>
-                    <p className="leading-relaxed">
-                      All participant records are stored inside a strongly-typed TypeScript file located at:{' '}
-                      <code className="bg-white/10 text-primary px-1.5 py-0.5 rounded font-mono">src/utils/certificates.ts</code>. 
-                      This ensures fast native database lookups without external server loading delays.
-                    </p>
-                  </div>
-
-                  {/* How to add new participants */}
-                  <div className="space-y-2">
-                    <h4 className="text-primary font-semibold flex items-center gap-2">
-                      <PlusCircle size={16} />
-                      2. How to add new participants
-                    </h4>
-                    <p className="leading-relaxed">
-                      Open <code className="bg-white/10 text-white px-1.5 py-0.5 rounded font-mono">src/utils/certificates.ts</code> and append a new JSON object to the <code className="bg-white/10 text-primary px-1.5 py-0.5 rounded font-mono">CERTIFICATES</code> array. Example:
-                    </p>
-                    <pre className="bg-white/5 p-3 rounded-lg border border-white/10 font-mono text-[11px] overflow-x-auto text-emerald-400">
-{`{
-  id: "TSH26-NEW99X",
-  name: "Jane Doe",
-  college: "CMRIT",
-  role: "Participant",
-  status: "Verified",
-  event: "The Social Hackathon’26"
-}`}
-                    </pre>
-                  </div>
-
-                  {/* How to deploy to Vercel */}
-                  <div className="space-y-2">
-                    <h4 className="text-primary font-semibold flex items-center gap-2">
-                      <UploadCloud size={16} />
-                      3. How to deploy updated version to Vercel
-                    </h4>
-                    <p className="leading-relaxed">
-                      Since your website is hosted on Vercel connected to your GitHub repository, updating the site is automated:
-                    </p>
-                    <ol className="list-decimal list-inside space-y-1 text-white/70 ml-1">
-                      <li>Save the updated participant records.</li>
-                      <li>Commit your changes using git: <code className="bg-white/10 text-white px-1 py-0.5 rounded font-mono">git commit -am "Added new certificate records"</code></li>
-                      <li>Push to your remote branch: <code className="bg-white/10 text-white px-1 py-0.5 rounded font-mono">git push</code></li>
-                    </ol>
-                    <p className="text-white/60 text-xs italic mt-1">
-                      Vercel will detect the push, rebuild the static assets instantly, and push the live updates to your domain.
-                    </p>
-                  </div>
-
-                  {/* How to generate QR Codes */}
-                  <div className="space-y-2">
-                    <h4 className="text-primary font-semibold flex items-center gap-2">
-                      <QrCode size={16} />
-                      4. How to generate verification QR Codes
-                    </h4>
-                    <p className="leading-relaxed">
-                      To embed a unique verification link directly onto each printed or digital certificate:
-                    </p>
-                    <ul className="list-disc list-inside space-y-1.5 text-white/70 ml-1">
-                      <li>
-                        Format the URL as:{' '}
-                        <code className="bg-white/10 text-primary px-1.5 py-0.5 rounded font-mono">https://social-hackathon.vercel.app/verify?id=&lt;certificate-id&gt;</code>
-                      </li>
-                      <li>
-                        <strong>Real-time Studio:</strong> Click the <strong>👑 Open Bulk QR Generator Studio</strong> button above to search and download/print high-contrast scannable QR badge cards dynamically.
-                      </li>
-                      <li>
-                        <strong>Canva / Design Integration:</strong> When generating certificates in Canva using the Bulk Create app, map the generated QR image URLs directly onto your certificate layout template.
-                      </li>
-                    </ul>
-                  </div>
-
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </div>
 
     </div>
   )
