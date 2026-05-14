@@ -1949,7 +1949,7 @@ export const CERTIFICATES: CertificateRecord[] = [
   },
   {
     "id": "TSH26-1214",
-    "name": "TEJAS KUMAR 6",
+    "name": "TEJAS KUMAR",
     "college": "Ballari Institute of Technology and Management",
     "role": "Participant",
     "status": "Verified",
