@@ -2562,7 +2562,7 @@ export const CERTIFICATES: CertificateRecord[] = [
   },
   {
     "id": "TSH26-1282",
-    "name": "Prakkruthi S",
+    "name": "Prakruthi S",
     "college": "CMR INSTITUTE OF TECHNOLOGY",
     "role": "Participant",
     "status": "Verified",
