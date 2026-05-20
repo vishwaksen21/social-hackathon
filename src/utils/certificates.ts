@@ -2505,6 +2505,7 @@ export const CERTIFICATES: CertificateRecord[] = [
     "event": "The Social Hackathon’26",
     "issueDate": "May 14, 2026"
   },
+
   {
     "id": "TSH26-1276",
     "name": "K Kushal",
@@ -2950,6 +2951,15 @@ export const CERTIFICATES: CertificateRecord[] = [
     "id": "TSH26-1325",
     "name": "Nisshanth SR",
     "college": "CMR INSTITUTE OF TECHNOLOGY",
+    "role": "Participant",
+    "status": "Verified",
+    "event": "The Social Hackathon’26",
+    "issueDate": "May 14, 2026"
+  },
+  {
+    "id": "TSH26-1326",
+    "name": "Eknath Nuvvula",
+    "college": "CMRIT",
     "role": "Participant",
     "status": "Verified",
     "event": "The Social Hackathon’26",
