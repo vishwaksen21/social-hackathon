@@ -53,8 +53,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8 pt-3 md:pt-4">
         <div
           className={`w-full rounded-[20px] border border-white/10 backdrop-blur-xl transition-all duration-500 ${scrolled
-              ? 'bg-black/70 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
-              : 'bg-black/40'
+            ? 'bg-black/70 shadow-[0_4px_30px_rgba(0,0,0,0.6)]'
+            : 'bg-black/40'
             }`}
         >
 
@@ -74,8 +74,8 @@ export default function Navbar() {
                   <Link key={link.path} to={link.path} className="relative">
                     <span
                       className={`text-sm tracking-wide transition ${isActive
-                          ? 'text-primary'
-                          : 'text-white/80 hover:text-primary'
+                        ? 'text-primary'
+                        : 'text-white/80 hover:text-primary'
                         }`}
                     >
                       {link.label}
@@ -122,8 +122,8 @@ export default function Navbar() {
                     key={path}
                     to={path}
                     className={`flex flex-col items-center justify-center shrink-0 w-[52px] h-[52px] rounded-xl transition ${isActive
-                        ? 'bg-white/10 border border-primary/30 text-primary'
-                        : 'text-white/70'
+                      ? 'bg-white/10 border border-primary/30 text-primary'
+                      : 'text-white/70'
                       }`}
                   >
                     <Icon size={18} />

@@ -98,10 +98,10 @@ export default function Contact() {
 
         {/* FAQs Section */}
         <motion.div
-           initial={{ opacity: 0, y: 40 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="text-center mb-10 md:mb-16 w-full"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10 md:mb-16 w-full"
         >
           <h2 className="font-poppins font-black uppercase text-2xl sm:text-3xl md:text-5xl mb-3 md:mb-4 leading-tight">
             Common{' '}
@@ -121,11 +121,10 @@ export default function Contact() {
             return (
               <InteractiveCard
                 key={i}
-                className={`overflow-hidden rounded-xl md:rounded-2xl border bg-white/[0.02] backdrop-blur-xl transition-all duration-300 ${
-                  isOpen
+                className={`overflow-hidden rounded-xl md:rounded-2xl border bg-white/[0.02] backdrop-blur-xl transition-all duration-300 ${isOpen
                     ? 'border-primary/40 shadow-[0_0_25px_rgba(255,255,0,0.15)]'
                     : 'border-white/10'
-                }`}
+                  }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -137,22 +136,20 @@ export default function Contact() {
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                 >
                   <h3
-                    className={`font-inter font-semibold text-sm md:text-base pr-4 leading-snug ${
-                      isOpen
+                    className={`font-inter font-semibold text-sm md:text-base pr-4 leading-snug ${isOpen
                         ? 'text-primary'
                         : 'text-white group-hover:text-primary/80'
-                    }`}
+                      }`}
                   >
                     {faq.q}
                   </h3>
 
                   {/* Icon */}
                   <div
-                    className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border transition ${
-                      isOpen
+                    className={`flex-shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border transition ${isOpen
                         ? 'bg-primary/10 border-primary text-primary'
                         : 'border-white/20 text-white/50'
-                    }`}
+                      }`}
                   >
                     {isOpen ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
