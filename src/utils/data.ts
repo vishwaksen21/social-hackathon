@@ -29,7 +29,7 @@ export const STATS = [
   { value: '24H', label: 'Hackathon Duration' },
   { value: '₹50K', label: 'Prize Pool' },
   { value: '1-4', label: 'Team Size' },
-  { value: '100+', label: 'Teams Registered' },
+  { value: '1000+', label: 'Teams Registered' },
 ]
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
